@@ -33,7 +33,7 @@ var revCollector = require('gulp-rev-collector');//版本替换
 var cache = require('gulp-cache');//缓存
 const revAppend=require('gulp-rev-append');//通过正则匹配查找链接添加版本号?rev=@@hash
 //刷新的页面
-var html_show="avatar.html";
+var html_show="website/index.html";
 
 /*变量定义*/
 var SassInput = './src/asset/sass/**/*.scss',
@@ -72,8 +72,8 @@ var ImgInput = './src/asset/images/**/*.+(png|jpg|gif|svg)',
     IconInput = './src/asset/images/icon/p-comments_port',
     IconOutput = './dist/asset/images/icon',
     ImgOutput = './dist/asset/images';
-var HtmlInput = './src/*.html',
-    HtmlMinInput = './dist/*.html',
+var HtmlInput = './src/**/*.html',
+    HtmlMinInput = './dist/*',
     HtmlOutput = './dist',
     HtmlCommon = './src/htmls--common/common.html';
 var plginsInput = './src/asset/plugins/**/*',

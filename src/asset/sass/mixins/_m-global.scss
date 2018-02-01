@@ -1,0 +1,153 @@
+@mixin g-clearfix {
+  //*zoom:1;针对ie6,其实现在没必要写了。
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin clearfix{
+  @include g-clearfix;
+}
+
+@mixin g-b-s--b-b {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin g-ht--all{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /*ie6不识别min-height*/
+}
+.g-clearfix,.clearfix {
+  @include g-clearfix;
+}
+/*省略号*/
+@mixin text-overflow--e{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+@mixin text-overflow--e-clamp($lineNum:2){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineNum;
+  overflow: hidden;
+}
+@mixin transform--center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+@mixin text-overflow-ht--e{
+  &::after{
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 20px 1px 45px;
+    background-image:-webkit-linear-gradient(to right, rgba(21, 84, 150, 0) 0%,rgba(21, 84, 150, .5) 45%,rgba(21, 84, 150, 1) 55%, rgba(21, 84, 150, 1) 100%);
+    background-image:linear-gradient(to right, rgba(21, 84, 150, 0) 0%,rgba(21, 84, 150, .5) 45%,rgba(21, 84, 150, 1) 55%, rgba(21, 84, 150, 1) 100%);
+  }
+}
+
+@mixin text-show-more($pd:0 5px 1px 40px,$rgba-start:rgba(255,255,255,.0),$rgba-center:rgba(255,255,255,.5),$rgba-end:rgba(255,255,255,1)){
+  display:block;
+  position: relative;
+  &::after{
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:$pd;
+    background-image:-webkit-linear-gradient(to right, $rgba-start 0%,$rgba-center 45%,$rgba-end 55%, $rgba-end 100%);
+    background-image:linear-gradient(to right, $rgba-start 0%,$rgba-center 45%,$rgba-end 55%, $rgba-end 100%);
+  }
+}
+@mixin link-show-more($fs:14px,$height:$fs*1.5,$rgba-start:rgba(255,255,255,.0),$rgba-center:rgba(255,255,255,.5),$rgba-end:rgba(255,255,255,1)){
+  display:inline-block;
+  position: absolute;
+  bottom:0;
+  right:0;
+  font-size: $fs;
+  height:$height;
+  line-height: $height;
+  padding-left:$fs*7;
+  padding-right:$fs/2;
+  background-image:-webkit-linear-gradient(to right, $rgba-start 0%,$rgba-center 45%,$rgba-end 55%, $rgba-end 100%);
+  background-image:linear-gradient(to right, $rgba-start 0%,$rgba-center 45%,$rgba-end 55%, $rgba-end 100%);
+}
+@mixin scale-img($time:1s){
+  transition: all $time ease;
+  &:hover{
+    transform: scale(1.05);
+    img{
+      opacity: .9;
+    }
+  }
+}
+/*inline-block去除元素间隙*/
+@mixin ib-wrap($spacing:-4px){
+  letter-spacing: $spacing;/*根据不同字体字号或许需要做一定的调整*/
+  word-spacing:$spacing;
+  font-size: 0;
+}
+@mixin ib($fs:16px){
+  font-size:$fs;
+  letter-spacing: normal;
+  word-spacing: normal;
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+}
+%scale-img-big{
+  transition: all 1s ease;
+  &:hover{
+    transform: scale(1.05);
+    img{
+      opacity: .9;
+    }
+  }
+}
+%pos-center{
+  top:0;
+  bottom:0;
+  left:auto;
+  margin:{
+    bottom:auto;
+    top:auto;
+  }
+}
+%text-overflow--e{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+%div-row{
+  display:table;
+  table-layout:fixed;
+  border-collapse: separate;
+}
+%div-cell{
+  display:table-cell;
+  width:1%;
+}
+.m-cell.g-v-a--t{
+  vertical-align: top !important;
+}
+%transform--center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}

@@ -1,0 +1,128 @@
+@import "../mixins/colors";
+html,body{
+  height:100%;
+  padding:0;
+}
+/*font-size*/
+.weui-panel__hd{
+  font-size:.7rem;
+  color:#000;
+}
+.weui-media-box__desc{
+  font-size:.7rem;
+}
+
+body{
+  background-color:#F4F4F4;
+}
+.container{
+  height:100%;
+  overflow:hidden;
+}
+a{
+  font-size:.7rem;
+  color:#858482;
+  @at-root &.weui-cell{
+    font-size:inherit;
+  }
+}
+.weui-media-box__desc{
+  a{
+    font-size: .65rem;
+    color:$color_orange_light;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea{
+  font-family: -apple-system-font,Helvetica Neue,sans-serif;
+}
+ul{
+  list-style: none;
+}
+.toolbar .picker-button{
+  font-size:.8rem;
+  color:#FF6600;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: $color_orange_dark;
+}
+.m-wrap{
+  padding-top:1px;
+}
+/*cells*/
+.weui-cell_swiped {
+  display: block;
+  padding: 0;
+  > .weui-cell__bd {
+    position: relative;
+    z-index: 1;
+    background-color: #FFFFFF;
+  }
+  > .weui-cell__ft {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    color: #FFFFFF;
+  }
+}
+.weui-swiped-btn {
+  display: block;
+  padding: 10px 1em;
+  line-height: 1.47058824;
+  color: inherit;
+}
+.weui-swiped-btn_default {
+  background-color: #C7C7CC;
+}
+.weui-swiped-btn_warn {
+  background-color: #FF3B30;
+}
+/*底部导航栏*/
+.weui-tabbar__item.weui-bar__item--on{
+  .weui-tabbar__icon>i{
+    color: $color_page;
+  }
+  .weui-tabbar__label{
+    color:$color_page;
+  }
+
+}
+.weui-tabbar__icon>i{
+  line-height: 27px;
+  font-size:27px;
+}
+.weui-grid__icon{
+  text-align: center;
+  &>i{
+    line-height: 30px;
+    font-size:30px;
+  }
+}
+.weui-tabbar__icon{
+  position: relative;
+
+}
+.weui-tabbar__item{
+  .weui-badge{
+    position: absolute;
+    top: -.4em;
+    right: 1em;
+  }
+}
+.weui-popup__container{
+  z-index:600;
+}
+.weui-popup__modal{
+  top:0;
+
+}
+.weui-btn_mini{
+  padding:0 .8rem;
+}
