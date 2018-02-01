@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ch-zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>项目官网-文章列表</title>
+    <link rel="stylesheet" href="../asset/plugins/layui/css/layui.css?rev=c6bd1352930d7bdc4f9307b77375199a">
+    <link rel="stylesheet" href="../asset/css/style-website.css">
+</head>
+<body>
+<!-- header start -->
+<div class="layui-header nav-box">
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md3 layui-col-xs3 nav-logo">
+                <img id="logo" src="../asset/images/website/logo.png" height="50" alt="logo">
+            </div>
+            <div class="layui-col-md1 layui-col-xs1 layui-col-md-offset1">
+                <a href="./index.html" target="_self">首页</a>
+            </div>
+            <div class="nav-item layui-col-md1 layui-col-xs1">
+                <a href="#" target="_self">关于我们</a>
+                <div class="nav-menu">
+                    <a href="./about.html" target="_blank">企业简介</a>
+                    <a href="./about.html" target="_blank">投资理念</a>
+                    <a href="./about.html" target="_blank">核心优势</a>
+                    <a href="./about.html" target="_blank">过往业绩</a>
+                    <a href="./about.html" target="_blank">核心团队</a>
+                </div>
+            </div>
+            <div class="layui-col-md1 layui-col-xs1">
+                <a href="./article-list.html" target="_self" class="active">公司新闻</a>
+            </div>
+            <div class="layui-col-md1 layui-col-xs1">
+                <a href="javascript:;" target="_self">导航2</a>
+            </div>
+            <div class="layui-col-md1 layui-col-xs1">
+                <a href="javascript:;" target="_self">导航3</a>
+            </div>
+
+
+            <div class="nav-item layui-col-md1 layui-col-xs1">
+                <a href="#" target="_self">联系我们</a>
+                <div class="nav-menu">
+                    <a href="./content.html" target="_self">联系我们</a>
+                    <a href="./article-list.html" target="_blank">招贤纳士</a>
+                </div>
+            </div>
+            <div class="layui-col-md2 layui-col-xs3 nav-btn">
+                <a href="/website/login.html" target="_self">
+                    <i class="layui-icon"></i> 登录客户中心
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header end -->
+<!-- list-title start -->
+<div class="layui-fluid banner banner--about">
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset6">
+                <div class="info-cn">关于公司</div>
+                <div class="info-en">ABOUT COMPANY</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- list-title end -->
+<!-- article-list start -->
+<div class="layui-container">
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <div class="local">
+                您正在浏览：
+                <a href="/">首页</a>
+                <a href="./article-list.html">关于我们</a>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space30 content">
+        <div class="layui-col-md6">
+            <div class="contact-head">
+                <div class="contact-title">留言簿</div>
+                <div class="contact-cont">欢迎您向我们提出建议，也可咨询具体问题</div>
+            </div>
+            <form action="" class="layui-form umsg">
+                <!--您的姓名-->
+                <div class="layui-form-item">
+                    <label for="">您的姓名</label>
+                    <input type="text" lay-verify="required" maxlengtg="12" placeholder="如：李先生 / 王女士">
+                </div>
+                <!--电子邮箱-->
+                <div class="layui-form-item">
+                    <label for="">电子邮箱</label>
+                    <input type="email" lay-verify="required|email" maxlength="30" placeholder="例：123456@qq.com">
+                </div>
+                <!--电话号码-->
+                <div class="layui-form-item">
+                    <label for="">电话号码</label>
+                    <input type="tel" lay-verify="required|phone|number" maxlength="12" placeholder="填写手机号码，方便与您取得联系">
+                </div>
+                <!--留言内容-->
+                <div class="layui-form-item">
+                    <label for="">留言内容</label>
+                    <textarea name="" rows="4" type="text" lay-verify="required" maxlength="200" placeholder="请简述您的问题或需要反馈的意见（200字以内）"></textarea>
+                </div>
+                <div class="layui-form-item">
+                    <input type="hidden" name="token">
+                    <input type="submit" lay-submit lay-filter="umsg" class="btn" value="提交留言">
+                </div>
+            </form>
+        </div>
+        <div class="layui-col-md6">
+            <div class="contact-head">
+                <div class="contact-title">办公地点</div>
+                <div class="contact-cont">浙江省 绍兴市 越城区 解放路1120号 金帝银泰城 2楼</div>
+                <div class="contact-body">
+                    <div class="contact-tip">
+                        <div class="contact-t">手机：</div>
+                        <div class="contact-c">13577889966</div>
+                    </div>
+                    <div class="contact-tip">
+                        <div class="contact-t">传真：</div>
+                        <div class="contact-c">0022-88556633</div>
+                    </div>
+                    <div class="contact-tip">
+                        <div class="contact-t">邮箱：</div>
+                        <div class="contact-c">123456@qq.com</div>
+                    </div>
+                    <div class="contact-name">浙江一个名字投资管理有限合伙企业</div>
+                    <div class="contact-tel">
+                        <div class="contact-t">Tel:0022-88556633</div>
+                    </div>
+                    <div class="contact-map">
+                        <div class="my-map">
+                            <div id="mapContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- article-list end -->
+<!-- container start -->
+<!-- container end -->
+<div class="layui-footer">
+    <div class="layui-fluid footer-nav">
+        <div class="layui-container">
+            <div class="layui-container">
+                <div class="layui-row">
+                    <div class="layui-col-md5">
+                        <ul class="footer-list">
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>首页</a></li>
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>关于我们</a></li>
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>导航1</a></li>
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>导航2</a></li>
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>导航3</a></li>
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>产品中心</a></li>
+                            <li><a href="javascript:;"><i class="layui-icon">&#xe623;</i>联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="layui-col-md4">
+                        <div class="contact-box">
+                            <div class="contact-ico"><i class="layui-icon">&#xe609;</i></div>
+                            <div class="contact-info">531835498@qq.com</div>
+                        </div>
+                        <div class="contact-box">
+                            <div class="contact-ico"><i class="layui-icon">&#xe63a;</i></div>
+                            <div class="contact-info">0888-88884545</div>
+                        </div>
+                        <div class="contact-box">
+                            <div class="contact-ico"><i class="layui-icon">&#xe715;</i></div>
+                            <div class="contact-info">公司地址公司地址公司地址公司地址公司地址</div>
+                        </div>
+                        <div class="contact-box">
+                            <div class="contact-ico"><i class="layui-icon">&#xe715;</i></div>
+                            <div class="contact-info">Company Address Company Address Company Address</div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <div class="footer-map">公司全称公司全称公司全称公司全称</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-fluid footer-icp">
+        <div class="layui-container">@ 2018 Company Name Assestment<span>本站由knight-peter开发</span></div>
+    </div>
+</div>
+
+<script src="../asset/plugins/layui/layui.js?rev=9b56ae39939493204376d43847c1b832"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=zpdvbdQ4KGbBB6Km93k4f3oINm3WUIEP"></script>
+<script src="../asset/js/website.js"></script>
+<script>
+    // 百度地图API功能
+    var map = new BMap.Map("mapContainer");
+    var point = new BMap.Point(120.587269, 29.99203);
+    map.centerAndZoom(point, 15);
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);               // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+</script>
+</body>
+</html>
