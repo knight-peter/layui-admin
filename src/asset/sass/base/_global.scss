@@ -174,8 +174,11 @@
   background-color:#fff;
 }
 
-.g-t-a--c,.g-ta--c{
+.g-ta--c{
   text-align: center;
+}
+.g-t-a--c{
+  @extend .g-ta--c;
 }
 .g-t-a-l,.g-ta--l{
   text-align: left;

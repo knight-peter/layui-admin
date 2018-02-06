@@ -1,0 +1,6 @@
+@import "./global";
+.layui-table th{
+  &.g-ta--c{
+    @extend .g-ta--c;
+  }
+}

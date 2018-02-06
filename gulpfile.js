@@ -33,7 +33,7 @@ var revCollector = require('gulp-rev-collector');//版本替换
 var cache = require('gulp-cache');//缓存
 const revAppend=require('gulp-rev-append');//通过正则匹配查找链接添加版本号?rev=@@hash
 //刷新的页面
-var html_show="website/index.html";
+var html_show="index.html";
 
 /*变量定义*/
 var SassInput = './src/asset/sass/**/*.scss',

@@ -221,7 +221,7 @@
   background-color: #fff;
 }
 
-.g-t-a--c, .g-ta--c {
+.g-ta--c, .g-t-a--c {
   text-align: center;
 }
 
@@ -1275,7 +1275,7 @@
 
 .banner {
   height: 240px;
-  background-image: url(../images/contact.jpg?v=2018-02-01);
+  background-image: url(../images/contact.jpg?v=2018-02-06);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1283,7 +1283,7 @@
 }
 
 .banner.user {
-  background-image: url(../images/user.jpg?v=2018-02-01);
+  background-image: url(../images/user.jpg?v=2018-02-06);
 }
 
 .info-cn {

@@ -1,4 +1,10 @@
-$border-color:#E6E6E6;
+@import "./base/_global";
+@import "./mixins/_m-global";
+@import "./layouts/l-page";
+@import "./base/rest_layui";
+
+
+
 
 .g-p--10{
   padding:10px;
@@ -12,59 +18,4 @@ $border-color:#E6E6E6;
 .g-m--0{
   margin:0;
 }
-.layui-form-item{
-  .layui-input-width--auto{
-    width:auto;
-  }
-}
-.layui-header {
-  .layui-form-item{
-    margin:0;
-  }
-  .layui-inline{
-    margin-bottom:0;
-    margin-top:10px;
-  }
-}
 
-
-
-.m-footer{
-  font-weight:300;
-  text-align: center;
-  color:#666;
-
-}
-.layui-layout-admin .m-footer{
-  padding:5px 0;
-}
-.m-footer a{
-  padding:0 5px;
-}
-.m-footer--inline p {
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 10px;
-  height:40px;
-}
-.m-breadcrumb-wrap{
-  padding:6px 20px;
-  border-bottom:1px solid $border-color;
-}
-.m-breadcrumb{
-  a,span{
-    font-size:12px;
-  }
-}
-.m-page-header{
-  border-bottom:1px solid $border-color;
-  padding:20px;
-  .m-header_title{
-    font-size:18px;
-    color:#444444;
-    line-height: 38px;
-    i{
-      margin-right:5px;
-    }
-  }
-}
