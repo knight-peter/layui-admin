@@ -113,19 +113,28 @@
 }
 /*font-------------------------------------------------------------------------------------*/
 .g-fs--12{
-  font-size: .6rem;
+  font-size: 12px;
 }
 .g-fs--14{
-  font-size: .7rem;
+  font-size: 14px;
 }
 .g-fs--16{
-  font-size: .8rem;
+  font-size: 16px;
 }
 .g-fs--18{
-  font-size: .9rem;
+  &.iconfont{
+    font-size: 18px;
+  }
+  font-size: 18px;
 }
 .g-fs--20{
-  font-size: 1rem;
+  &.iconfont{
+    font-size: 20px;
+  }
+  font-size: 20px;
+}
+.g-fw--600{
+  font-weight:600;
 }
 /*color--------------------------------------------------------------------------------*/
 .g-c-yellow,
@@ -168,6 +177,9 @@
 .g-c--disabled,
 .g-c--gray{
   color:#999;
+}
+.g-c--black{
+  color:#000;
 }
 /*color------------------------------------------------------------------------*/
 .g-bg-c--w{

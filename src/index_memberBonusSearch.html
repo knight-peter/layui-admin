@@ -18,15 +18,11 @@
         <div class="layui-logo">layui后台管理系统</div>
         <!-- 头部区域 -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:;">控制台</a></li>
-            <li class="layui-nav-item layui-this"><a href="javascript:;">商品管理</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">用户</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">其它系统</a>
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;">邮件管理</a></dd>
-                    <dd><a href="javascript:;">消息管理</a></dd>
-                    <dd><a href="javascript:;">授权管理</a></dd>
+                    <dd><a href="javascript:;">帮助中心</a></dd>
                 </dl>
             </li>
         </ul>
@@ -48,8 +44,10 @@
                     徐子玉
                 </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">基本资料</a></dd>
-                        <dd><a href="javascript:;">安全设置</a></dd>
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -66,58 +64,59 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">快捷菜单</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">购买商品</a></dd>
-                        <dd><a href="javascript:;">会员注册</a></dd>
-                        <dd><a href="javascript:;">实时业绩查询</a></dd>
-                        <dd><a href="javascript:;">在线充值</a></dd>
+                        <dd><a href="./index_shopping.html">购买商品</a></dd>
+                        <dd><a href="./index_register.html">会员注册</a></dd>
+                        <dd class="layui-this"><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
+                        <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">订单中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">创建订单</a></dd>
-                        <dd><a href="javascript:;">我的购物车</a></dd>
-                        <dd><a href="javascript:;">支付他人订单</a></dd>
-                        <dd><a href="javascript:;">订单统计</a></dd>
+                        <dd><a href="./order_createOrder.html">创建订单</a></dd>
+                        <dd><a href="./order_shoppingCart.html">我的购物车</a></dd>
+                        <dd><a href="./order_payOtherOrder.html">支付他人订单</a></dd>
+                        <dd><a href="./order_orderSearch.html">订单统计</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">会员资料维护</a>
+                    <a href="./member_memberDataSeach.html">会员资料维护</a>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">财务中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">奖金查询</a></dd>
-                        <dd><a href="javascript:;">我的账户</a></dd>
-                        <dd><a href="javascript:;">在线充值</a></dd>
-                        <dd><a href="javascript:;">购物币查询</a></dd>
-                        <dd><a href="javascript:;">发展基金查询</a></dd>
-                        <dd><a href="javascript:;">产品积分查询</a></dd>
-                        <dd><a href="javascript:;">提现查询</a></dd>
-                        <dd><a href="javascript:;">会员转账</a></dd>
-                        <dd><a href="javascript:;">转账查询</a></dd>
-                        <dd><a href="javascript:;">奖金扣补查询</a></dd>
-                        <dd><a href="javascript:;">实时业绩查询</a></dd>
-                        <dd><a href="javascript:;">交易流水查询</a></dd>
-                        <dd><a href="javascript:;">推广奖查询</a></dd>
-                        <dd><a href="javascript:;">奖衔查询</a></dd>
+                        <dd><a href="./finance_memberBonusSearch.html">奖金查询</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
+                        <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
+                        <dd><a href="./finance_memberPassbookSearch.html">购物币查询</a></dd>
+                        <dd><a href="./finance_memberFundSearch.html">发展基金查询</a></dd>
+                        <dd><a href="./finance_memberPointSearch.html">产品积分查询</a></dd>
+                        <dd><a href="./finance_memberWithdrawlsSearch.html">提现查询</a></dd>
+                        <dd><a href="./finance_memberTransferInsert.html">会员转账</a></dd>
+                        <dd><a href="./finance_memberTransferSearch.html">转账查询</a></dd>
+                        <dd><a href="./finance_memberChangeBonusSearch.html">奖金扣补查询</a></dd>
+                        <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_memberTransactionSearchAction.html">交易流水查询</a></dd>
+                        <dd><a href="./finance_promotionAwardSearch.html">推广奖查询</a></dd>
+                        <dd><a href="finance_awardGradeSearch.html">奖衔查询</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">个人中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">个人资料</a></dd>
-                        <dd><a href="javascript:;">安全设置</a></dd>
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">帮助中心</a>
+                    <a href="./help.html">帮助中心</a>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">留言管理</a>
+                    <a href="./emails.html">邮件管理</a>
                 </li>
-                <!--<li class="layui-nav-item"><a href="javascript:;">云市场</a></li>-->
-                <!--<li class="layui-nav-item"><a href="javascript:;">发布商品</a></li>-->
             </ul>
         </div>
     </aside>
@@ -133,73 +132,112 @@
         <!-- 页面内容 start -->
         <div class="m-page-content">
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>登陆信息</legend>
+                <legend>基本信息信息</legend>
             </fieldset>
-            <p class="layui-text"><span class="g-c--warn">徐子玉</span>，您好，欢迎您登录！今天是： <span class="g-c--warn">2018年02月06日 Tue</span>； 您的上次登录时间是：
-                <span class="g-c--warn">2018年02月05日 Mon</span></p>
-            <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务提醒</legend>
-            </fieldset>
+            <p class="g-ta--c layui-text">李晓倩<span class="layui-badge layui-bg-green g-ml--10 g-mr--10">钻级</span>第<span class="g-c--orange g-p_strong g-fs--18">20180215</span>期</p>
             <table class="layui-table">
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">财政月业绩提醒</th>
-                </tr>
-                </thead>
+                <colgroup>
+                    <col style="width:200px;">
+                </colgroup>
                 <tbody>
                 <tr>
-                    <th>您的目前奖衔</th>
-                    <td>无奖衔</td>
-                    <th>完成如下业绩可升至</th>
-                    <td>一星宝石</td>
+                    <th>个人首单业绩</th>
+                    <td class="g-c--red">20000.00pv</td>
                 </tr>
                 <tr>
-                    <th>您目前个人责任消费</th>
-                    <td>0.00</td>
-                    <th>还需完成责任消费</th>
-                    <td>400.00</td>
+                    <th>个人升级单业绩</th>
+                    <td class="g-c--red">0.00pv</td>
                 </tr>
                 <tr>
-                    <th>冠军月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成冠军部门业绩（pv）</th>
-                    <td>20000.00pv</td>
+                    <th>个人当月重消业绩</th>
+                    <td class="g-c--red">0.00pv</td>
                 </tr>
                 <tr>
-                    <th>活跃月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成活跃部门业绩（pv）</th>
-                    <td>20000.00pv</td>
+                    <th>个人当日新增业绩</th>
+                    <td class="g-c--red">0.00pv</td>
                 </tr>
-                </tbody>
-                <thead>
                 <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">累计完成业绩</th>
+                    <th>冠军部门当日新增业绩</th>
+                    <td class="g-c--red">0.00pv</td>
                 </tr>
-                </thead>
-                <tbody>
+                <tr>
+                    <th>活跃部门当日新增业绩</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>奖衔</th>
+                    <td class="g-c--red">无奖衔</td>
+                </tr>
+                <tr>
+                    <th>冠军部门月新增业绩</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>活跃部门月新增业绩</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
                 <tr>
                     <th>冠军部门累计业绩</th>
-                    <td>660K+000.00pv</td>
-                    <th>活跃部门累计业绩</th>
-                    <td>300K+000.00pv</td>
+                    <td class="g-c--red">660K+000.00pv</td>
                 </tr>
                 <tr>
-                    <th>荣誉奖衔</th>
-                    <td>无奖衔</td>
-                    <th></th>
-                    <td></td>
+                    <th>活跃部门累计业绩</th>
+                    <td class="g-c--red">300K+000.00pv</td>
                 </tr>
                 </tbody>
             </table>
-            <p class="layui-text">以上数据考核周期为2018-02-01 00:00:00 - 2018-02-28 23:59:59；此数据为目前预算信息，尚未最后核算，仅供参考</p>
-            <hr>
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务公告</legend>
+                <legend>日结总奖金</legend>
             </fieldset>
-            <table id="tableNotice" lay-filter="test"></table>
-            <hr>
+            <table class="layui-table">
+                <colgroup>
+                    <col style="width:200px;">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>销售奖</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>推广奖</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>冠军部门返利</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>其余部门返利</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>推荐奖</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>总奖金</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                </tbody>
+            </table>
+            <fieldset class="layui-field-title layui-elem-field">
+                <legend>月结总奖金</legend>
+            </fieldset>
+            <table class="layui-table">
+                <colgroup>
+                    <col style="width:200px;">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>零售奖</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                <tr>
+                    <th>总奖金</th>
+                    <td class="g-c--red">0.00pv</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
         <!-- 页面内容 end -->
     </article>
@@ -240,35 +278,7 @@
             , mymod = layui.mymod
             , table = layui.table;
 //      layer.msg('Hello World');
-        /*业务公告*/
-        table.render({
-            elem:'#tableNotice'
-            ,height:315
-//            ,url:''
-            ,page:true
-            ,cols:[[
-                {field:'group',title:'分类',fixed:'left'},
-                {field:'title',title:'标题',fixed:'left'},
-                {field:'date',title:'日期',fixed:'left'}
-                ]]
-        })
-//        table.render({
-//            elem: '#tableNotice'
-//            ,height: 315
-////            ,url: '/demo/table/user/' //数据接口
-//            ,page: true //开启分页
-//            ,cols: [[ //表头
-//                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-//                ,{field: 'username', title: '用户名', width:80}
-//                ,{field: 'sex', title: '性别', width:80, sort: true}
-//                ,{field: 'city', title: '城市', width:80}
-//                ,{field: 'sign', title: '签名', width: 177}
-//                ,{field: 'experience', title: '积分', width: 80, sort: true}
-//                ,{field: 'score', title: '评分', width: 80, sort: true}
-//                ,{field: 'classify', title: '职业', width: 80}
-//                ,{field: 'wealth', title: '财富', width: 135, sort: true}
-//            ]]
-//        });
+
 
     })
     //    layui.link('asset/css/main.css');

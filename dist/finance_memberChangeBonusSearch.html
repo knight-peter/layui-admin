@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=c6bd1352930d7bdc4f9307b77375199a">
+    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=e709c10966d4caa7924a8419714d5292">
     <link rel="stylesheet" href="asset/css/main.css?rev=@@hash">
     <title>layui后台管理系统-奖金扣补查询</title>
 </head>
@@ -18,15 +18,11 @@
         <div class="layui-logo">layui后台管理系统</div>
         <!-- 头部区域 -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:;">控制台</a></li>
-            <li class="layui-nav-item layui-this"><a href="javascript:;">商品管理</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">用户</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">其它系统</a>
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;">邮件管理</a></dd>
-                    <dd><a href="javascript:;">消息管理</a></dd>
-                    <dd><a href="javascript:;">授权管理</a></dd>
+                    <dd><a href="javascript:;">帮助中心</a></dd>
                 </dl>
             </li>
         </ul>
@@ -47,8 +43,10 @@
                     徐子玉
                 </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">基本资料</a></dd>
-                        <dd><a href="javascript:;">安全设置</a></dd>
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -62,13 +60,14 @@
         <div class="layui-side-scroll">
             <!--左侧导航区域（可配合layui已有的垂直导航）-->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;">快捷菜单</a>
                     <dl class="layui-nav-child">
                         <dd><a href="./index_shopping.html">购买商品</a></dd>
                         <dd><a href="./index_register.html">会员注册</a></dd>
                         <dd><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
-                        <dd><a href="./index_myAccount.html">在线充值</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
+                        <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -81,42 +80,42 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">会员资料维护</a>
+                    <a href="./member_memberDataSeach.html">会员资料维护</a>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">财务中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">奖金查询</a></dd>
-                        <dd><a href="javascript:;">我的账户</a></dd>
-                        <dd><a href="javascript:;">在线充值</a></dd>
-                        <dd><a href="javascript:;">购物币查询</a></dd>
-                        <dd><a href="javascript:;">发展基金查询</a></dd>
-                        <dd><a href="javascript:;">产品积分查询</a></dd>
-                        <dd><a href="javascript:;">提现查询</a></dd>
-                        <dd><a href="javascript:;">会员转账</a></dd>
-                        <dd><a href="javascript:;">转账查询</a></dd>
-                        <dd><a href="javascript:;">奖金扣补查询</a></dd>
-                        <dd><a href="javascript:;">实时业绩查询</a></dd>
-                        <dd><a href="javascript:;">交易流水查询</a></dd>
-                        <dd><a href="javascript:;">推广奖查询</a></dd>
-                        <dd><a href="javascript:;">奖衔查询</a></dd>
+                        <dd><a href="./finance_memberBonusSearch.html">奖金查询</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
+                        <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
+                        <dd><a href="./finance_memberPassbookSearch.html">购物币查询</a></dd>
+                        <dd><a href="./finance_memberFundSearch.html">发展基金查询</a></dd>
+                        <dd><a href="./finance_memberPointSearch.html">产品积分查询</a></dd>
+                        <dd><a href="./finance_memberWithdrawlsSearch.html">提现查询</a></dd>
+                        <dd><a href="./finance_memberTransferInsert.html">会员转账</a></dd>
+                        <dd><a href="./finance_memberTransferSearch.html">转账查询</a></dd>
+                        <dd class="layui-this"><a href="./finance_memberChangeBonusSearch.html">奖金扣补查询</a></dd>
+                        <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_memberTransactionSearchAction.html">交易流水查询</a></dd>
+                        <dd><a href="./finance_promotionAwardSearch.html">推广奖查询</a></dd>
+                        <dd><a href="finance_awardGradeSearch.html">奖衔查询</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">个人中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">个人资料</a></dd>
-                        <dd><a href="javascript:;">安全设置</a></dd>
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">帮助中心</a>
+                    <a href="./help.html">帮助中心</a>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">留言管理</a>
+                    <a href="./emails.html">邮件管理</a>
                 </li>
-                <!--<li class="layui-nav-item"><a href="javascript:;">云市场</a></li>-->
-                <!--<li class="layui-nav-item"><a href="javascript:;">发布商品</a></li>-->
             </ul>
         </div>
     </aside>
@@ -224,7 +223,7 @@
     </footer>
 </div>
 
-<script src="asset/plugins/layui/layui.js?rev=9b56ae39939493204376d43847c1b832"></script>
+<script src="asset/plugins/layui/layui.js?rev=2efecd1c44cb8ee160f54f1847070cbd"></script>
 <script>
     layui.config({
         base: './asset/' //这是存放拓展模块的根目录

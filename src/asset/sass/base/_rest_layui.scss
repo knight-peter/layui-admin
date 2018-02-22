@@ -4,3 +4,56 @@
     @extend .g-ta--c;
   }
 }
+.layui-card-body,.layui-card-header,.layui-form-label,.layui-form-mid,.layui-form-select,.layui-input-block,.layui-input-inline,.layui-textarea {
+  position: relative
+}
+
+.layui-card {
+  margin-bottom: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  border:1px solid #E6E6E6;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05)
+}
+
+.layui-card:last-child {
+  margin-bottom: 0
+}
+
+.layui-card-header {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px;
+  border-bottom: 1px solid #E6E6E6;
+  color: #333;
+  border-radius: 2px 2px 0 0;
+  font-size: 14px;
+  .iconfont{
+    vertical-align: middle;
+  }
+}
+
+.layui-bg-black,.layui-bg-blue,.layui-bg-cyan,.layui-bg-green,.layui-bg-orange,.layui-bg-red {
+  color: #fff!important
+}
+
+.layui-card-body {
+  padding: 10px 15px;
+  line-height: 24px
+}
+
+.layui-card-body .layui-table {
+  margin: 5px 0
+}
+
+.layui-card .layui-tab {
+  margin: 0
+}
+
+.layui-panel-window {
+  position: relative;
+  padding: 15px;
+  border-radius: 0;
+  border-top: 5px solid #E6E6E6;
+  background-color: #fff
+}

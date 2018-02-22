@@ -31,9 +31,9 @@
     "pump": "^1.0.2",
     "run-sequence": "^2.1.0"
   },
-  "name": "imgUpload",
+  "name": "layui-admin",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "description": "头像裁剪上传及多图上传"
+  "description": "分销软件"
 }
