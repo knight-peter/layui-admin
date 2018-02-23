@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=e709c10966d4caa7924a8419714d5292">
+    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=c6bd1352930d7bdc4f9307b77375199a">
     <link rel="stylesheet" href="asset/css/main.css?rev=@@hash">
     <title>layui后台管理系统-在线充值</title>
 </head>
@@ -67,7 +67,7 @@
                         <dd><a href="./index_register.html">会员注册</a></dd>
                         <dd><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
                         <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
-                        <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
+                        <dd class="layui-this"><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -131,73 +131,43 @@
         <!-- 页面内容 start -->
         <div class="m-page-content">
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>登陆信息</legend>
+                <legend>在线充值</legend>
             </fieldset>
-            <p class="layui-text"><span class="g-c--warn">徐子玉</span>，您好，欢迎您登录！今天是： <span class="g-c--warn">2018年02月06日 Tue</span>； 您的上次登录时间是：
-                <span class="g-c--warn">2018年02月05日 Mon</span></p>
-            <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务提醒</legend>
-            </fieldset>
-            <table class="layui-table">
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">财政月业绩提醒</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>您的目前奖衔</th>
-                    <td>无奖衔</td>
-                    <th>完成如下业绩可升至</th>
-                    <td>一星宝石</td>
-                </tr>
-                <tr>
-                    <th>您目前个人责任消费</th>
-                    <td>0.00</td>
-                    <th>还需完成责任消费</th>
-                    <td>400.00</td>
-                </tr>
-                <tr>
-                    <th>冠军月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成冠军部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                <tr>
-                    <th>活跃月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成活跃部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                </tbody>
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">累计完成业绩</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>冠军部门累计业绩</th>
-                    <td>660K+000.00pv</td>
-                    <th>活跃部门累计业绩</th>
-                    <td>300K+000.00pv</td>
-                </tr>
-                <tr>
-                    <th>荣誉奖衔</th>
-                    <td>无奖衔</td>
-                    <th></th>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-            <p class="layui-text">以上数据考核周期为2018-02-01 00:00:00 - 2018-02-28 23:59:59；此数据为目前预算信息，尚未最后核算，仅供参考</p>
-            <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务公告</legend>
-            </fieldset>
-            <table id="tableNotice" lay-filter="test"></table>
-            <hr>
+            <form action="" class="layui-form">
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">充值会员</label>
+                    <div class="layui-input-block">
+                        <div class="layui-form-mid">
+                            XC06450228</div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">当前余额</label>
+                    <div class="layui-input-block">
+                        <div class="layui-form-mid"><span class="g-c--red g-fw--600">0.00</span>元</div>
+                        <a href="javascript:;" class="layui-btn layui-btn-warm layui-btn-sm" style="margin-top:3px">查看明细</a>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>充值金额</label>
+                    <div class="layui-input-inline">
+                        <input type="number" class="layui-input" required lay-verify="required|momey">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>支付方式</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="payType" id="quick" value="quick" title="快钱" checked>
+                        <input type="radio" name="payType" id="alipay" value="alipay" title="支付宝">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button type="button" lay-submit lay-filter="rechargeOnline" class="layui-btn">确认付款</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <!-- 页面内容 end -->
     </article>
@@ -223,14 +193,14 @@
     </footer>
 </div>
 
-<script src="asset/plugins/layui/layui.js?rev=2efecd1c44cb8ee160f54f1847070cbd"></script>
+<script src="asset/plugins/layui/layui.js?rev=9b56ae39939493204376d43847c1b832"></script>
 <script>
     layui.config({
         base: './asset/' //这是存放拓展模块的根目录
     }).extend({ // 设定模块名
         mymod: 'js/mymod'
     });
-    layui.use(['jquery','layer', 'element','table', 'mymod'], function () {
+    layui.use(['jquery','layer', 'element','table','form','mymod'], function () {
         var $=layui.$
             ,layer = layui.layer
             , form = layui.form
@@ -238,36 +208,16 @@
             , mymod = layui.mymod
             , table = layui.table;
 //      layer.msg('Hello World');
-        /*业务公告*/
-        table.render({
-            elem:'#tableNotice'
-            ,height:315
-//            ,url:''
-            ,page:true
-            ,cols:[[
-                {field:'group',title:'分类',fixed:'left'},
-                {field:'title',title:'标题',fixed:'left'},
-                {field:'date',title:'日期',fixed:'left'}
-                ]]
+        form.verify({
+            momey:[
+                /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/
+                ,'金额只能保留小数点后两位'
+            ]
+        });
+        form.on('submit(rechargeOnline)',function (data) {
+            console.log(data.elem);
+            return false;
         })
-//        table.render({
-//            elem: '#tableNotice'
-//            ,height: 315
-////            ,url: '/demo/table/user/' //数据接口
-//            ,page: true //开启分页
-//            ,cols: [[ //表头
-//                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-//                ,{field: 'username', title: '用户名', width:80}
-//                ,{field: 'sex', title: '性别', width:80, sort: true}
-//                ,{field: 'city', title: '城市', width:80}
-//                ,{field: 'sign', title: '签名', width: 177}
-//                ,{field: 'experience', title: '积分', width: 80, sort: true}
-//                ,{field: 'score', title: '评分', width: 80, sort: true}
-//                ,{field: 'classify', title: '职业', width: 80}
-//                ,{field: 'wealth', title: '财富', width: 135, sort: true}
-//            ]]
-//        });
-
     })
     //    layui.link('asset/css/main.css');
 </script>

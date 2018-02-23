@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=e709c10966d4caa7924a8419714d5292">
+    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=c6bd1352930d7bdc4f9307b77375199a">
     <link rel="stylesheet" href="asset/css/main.css?rev=@@hash">
     <title>layui后台管理系统-创建订单</title>
 </head>
@@ -131,73 +131,44 @@
         <!-- 页面内容 start -->
         <div class="m-page-content">
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>登陆信息</legend>
+                <legend>创建新订单</legend>
             </fieldset>
-            <p class="layui-text"><span class="g-c--warn">徐子玉</span>，您好，欢迎您登录！今天是： <span class="g-c--warn">2018年02月06日 Tue</span>； 您的上次登录时间是：
-                <span class="g-c--warn">2018年02月05日 Mon</span></p>
+            <div class="layui-form">
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label" style="width:100px">创建我的订单</label>
+                    <div class="layui-input-block">
+                        <button type="button" class="layui-btn layui-btn-primary">积分换购</button>
+                        <button type="button" class="layui-btn layui-btn-primary">升级单</button>
+                        <button type="button" class="layui-btn layui-btn-primary">重消单</button>
+                        <button type="button" class="layui-btn layui-btn-primary">促销单</button>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label" style="width:100px">创建他人订单</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input">
+
+                    </div>
+                    <div class="layui-input-inline">
+                        <button type="button" class="layui-btn">确定</button>
+                    </div>
+                </div>
+            </div>
             <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务提醒</legend>
-            </fieldset>
-            <table class="layui-table">
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">财政月业绩提醒</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>您的目前奖衔</th>
-                    <td>无奖衔</td>
-                    <th>完成如下业绩可升至</th>
-                    <td>一星宝石</td>
-                </tr>
-                <tr>
-                    <th>您目前个人责任消费</th>
-                    <td>0.00</td>
-                    <th>还需完成责任消费</th>
-                    <td>400.00</td>
-                </tr>
-                <tr>
-                    <th>冠军月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成冠军部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                <tr>
-                    <th>活跃月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成活跃部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                </tbody>
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">累计完成业绩</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>冠军部门累计业绩</th>
-                    <td>660K+000.00pv</td>
-                    <th>活跃部门累计业绩</th>
-                    <td>300K+000.00pv</td>
-                </tr>
-                <tr>
-                    <th>荣誉奖衔</th>
-                    <td>无奖衔</td>
-                    <th></th>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-            <p class="layui-text">以上数据考核周期为2018-02-01 00:00:00 - 2018-02-28 23:59:59；此数据为目前预算信息，尚未最后核算，仅供参考</p>
-            <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务公告</legend>
-            </fieldset>
-            <table id="tableNotice" lay-filter="test"></table>
-            <hr>
+            <div class="layui-text">
+                <dl>
+                    <dt class="g-fw--600 g-c--black g-fs--18 g-mb--10">1、新增订单说明</dt>
+                    <dd class="g-mb--20">点击创建新订单—选择"订单类型"，进入商品浏览页</dd>
+                    <dt class="g-fw--600 g-c--black g-fs--18 g-mb--10">2、商品浏览说明</dt>
+                    <dd class="g-mb--20">在商品浏览界面找到要购买的商品，输入相应数量，点击加入购物车即可；或者点击商品图片，进入商品详情界面，再点击加入购物车。</dd>
+                    <dt class="g-fw--600 g-c--black g-fs--18 g-mb--10">3、购物车说明</dt>
+                    <dd class="g-mb--20">点击左下角购物车图片进入购物车，勾选要购买的商品，点击购买按钮即可生成一个新增订单。</dd>
+                    <dt class="g-fw--600 g-c--black g-fs--18 g-mb--10">4、确认订单说明</dt>
+                    <dd class="g-mb--20">选择您已填写好的地址，或是点击新增地址按钮新增您要的收货地址，点击确认订单即可。</dd>
+                    <dt class="g-fw--600 g-c--black g-fs--18 g-mb--10">5、支付订单说明</dt>
+                    <dd class="g-mb--20">在订单统计中选择您还没有支付的订单，点击支付图标，选择您的支付方式，而后进行支付；或者是在确认完订单后直接点击支付按钮进入支付页面。</dd>
+                </dl>
+            </div>
         </div>
         <!-- 页面内容 end -->
     </article>
@@ -223,7 +194,7 @@
     </footer>
 </div>
 
-<script src="asset/plugins/layui/layui.js?rev=2efecd1c44cb8ee160f54f1847070cbd"></script>
+<script src="asset/plugins/layui/layui.js?rev=9b56ae39939493204376d43847c1b832"></script>
 <script>
     layui.config({
         base: './asset/' //这是存放拓展模块的根目录
