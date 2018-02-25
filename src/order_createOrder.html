@@ -64,7 +64,7 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">快捷菜单</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="./index_shopping.html">购买商品</a></dd>
+                        <dd><a href="./order_createOrder.html">购买商品</a></dd>
                         <dd><a href="./index_register.html">会员注册</a></dd>
                         <dd><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
                         <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
@@ -209,36 +209,17 @@
             , element = layui.element
             , mymod = layui.mymod
             , table = layui.table;
-//      layer.msg('Hello World');
-        /*业务公告*/
-        table.render({
-            elem:'#tableNotice'
-            ,height:315
-//            ,url:''
-            ,page:true
-            ,cols:[[
-                {field:'group',title:'分类',fixed:'left'},
-                {field:'title',title:'标题',fixed:'left'},
-                {field:'date',title:'日期',fixed:'left'}
-                ]]
+        layer.alert('该模块正在开发中',{
+            icon:4,
+            closeBtn:0,
+            btn:['返回上一页','返回首页'],
+            btn1:function () {
+                window.history.back();
+            },
+            btn2:function () {
+                window.location.href='./index.html';
+            }
         })
-//        table.render({
-//            elem: '#tableNotice'
-//            ,height: 315
-////            ,url: '/demo/table/user/' //数据接口
-//            ,page: true //开启分页
-//            ,cols: [[ //表头
-//                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-//                ,{field: 'username', title: '用户名', width:80}
-//                ,{field: 'sex', title: '性别', width:80, sort: true}
-//                ,{field: 'city', title: '城市', width:80}
-//                ,{field: 'sign', title: '签名', width: 177}
-//                ,{field: 'experience', title: '积分', width: 80, sort: true}
-//                ,{field: 'score', title: '评分', width: 80, sort: true}
-//                ,{field: 'classify', title: '职业', width: 80}
-//                ,{field: 'wealth', title: '财富', width: 135, sort: true}
-//            ]]
-//        });
 
     })
     //    layui.link('asset/css/main.css');

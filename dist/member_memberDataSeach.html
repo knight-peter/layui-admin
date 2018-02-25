@@ -60,10 +60,10 @@
         <div class="layui-side-scroll">
             <!--左侧导航区域（可配合layui已有的垂直导航）-->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;">快捷菜单</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="./index_shopping.html">购买商品</a></dd>
+                        <dd><a href="./order_createOrder.html">购买商品</a></dd>
                         <dd><a href="./index_register.html">会员注册</a></dd>
                         <dd><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
                         <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
@@ -131,73 +131,66 @@
         <!-- 页面内容 start -->
         <div class="m-page-content">
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>登陆信息</legend>
+                <legend>会员查询</legend>
             </fieldset>
-            <p class="layui-text"><span class="g-c--warn">徐子玉</span>，您好，欢迎您登录！今天是： <span class="g-c--warn">2018年02月06日 Tue</span>； 您的上次登录时间是：
-                <span class="g-c--warn">2018年02月05日 Mon</span></p>
+            <form action="" class="layui-form">
+                <div class="layui-row layui-col-space10 layui-form-item">
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label">会员编号</label>
+                        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label">姓名</label>
+                        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label">级别</label>
+                        <div class="layui-input-block">
+                            <select name="" lay-verify="">
+                                <option value="">请选择</option>
+                                <option value="1">待审客户</option>
+                                <option value="2">优惠客户</option>
+                                <option value="3">普级</option>
+                                <option value="4">银级</option>
+                                <option value="5">金级</option>
+                                <option value="6">钻级</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label">证件号</label>
+                        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label">移动电话</label>
+                        <div class="layui-input-block"><input type="tel" lay-verify="phone" class="layui-input"></div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label">原编号</label>
+                        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label" style="padding-left:10px;width:85px">核实日期范围</label>
+                        <div class="layui-input-block"><input type="text" id="verifyDate" class="layui-input"></div>
+                    </div>
+                    <div class="layui-col-lg3 layui-col-md6">
+                        <label for="" class="layui-form-label" style="padding-left:10px;width:85px">加入日期范围</label>
+                        <div class="layui-input-block"><input type="text" id="createDate" class="layui-input"></div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="memberDataSeach">查询</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
             <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务提醒</legend>
-            </fieldset>
-            <table class="layui-table">
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">财政月业绩提醒</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>您的目前奖衔</th>
-                    <td>无奖衔</td>
-                    <th>完成如下业绩可升至</th>
-                    <td>一星宝石</td>
-                </tr>
-                <tr>
-                    <th>您目前个人责任消费</th>
-                    <td>0.00</td>
-                    <th>还需完成责任消费</th>
-                    <td>400.00</td>
-                </tr>
-                <tr>
-                    <th>冠军月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成冠军部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                <tr>
-                    <th>活跃月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成活跃部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                </tbody>
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">累计完成业绩</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>冠军部门累计业绩</th>
-                    <td>660K+000.00pv</td>
-                    <th>活跃部门累计业绩</th>
-                    <td>300K+000.00pv</td>
-                </tr>
-                <tr>
-                    <th>荣誉奖衔</th>
-                    <td>无奖衔</td>
-                    <th></th>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-            <p class="layui-text">以上数据考核周期为2018-02-01 00:00:00 - 2018-02-28 23:59:59；此数据为目前预算信息，尚未最后核算，仅供参考</p>
-            <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务公告</legend>
-            </fieldset>
-            <table id="tableNotice" lay-filter="test"></table>
-            <hr>
+            <div class="layui-btn-group">
+                <button class="layui-btn" id="addNewMember"><i class="layui-icon">&#xe654;</i>注册新会员</button>
+                <button class="layui-btn layui-btn-danger" id="batchDel"><i class="layui-icon">&#xe640;</i>删除会员</button>
+            </div>
+            <table id="memberData" lay-filter="memberData"></table>
         </div>
         <!-- 页面内容 end -->
     </article>
@@ -222,52 +215,186 @@
         </div>
     </footer>
 </div>
-
+    <form class="layui-form g-pt--10" style="display:none" id="memberRegister">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label"><span class="g-c--red g-mr--5">*</span>销售商编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="upSaleNo" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-input-inline">
+                    <a href="javascript:;" class="layui-btn">查询</a>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label"><span class="g-c--red g-mr--5">*</span>服务商编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="upServiceNo" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-input-inline">
+                    <a href="javascript:;" class="layui-btn">查询</a>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label"><span class="g-c--red g-mr--5">*</span>姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="name" autocomplete="off" class="layui-input" placeholder="姓名将绑定银行卡户名">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label"><span class="g-c--red g-mr--5">*</span>移动电话</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>证件类型</label>
+                <div class="layui-input-inline">
+                    <select name="certificateType" lay-verify="required">
+                        <option value="" selected>身份证</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline"><label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>证件号</label>
+                <div class="layui-input-inline"><input name="certificateNo" lay-verify="required|identity" type="text" autocomplete="off" class="layui-input"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>登录密码</label>
+                <div class="layui-input-inline"><input name="password" type="password" class="layui-input" lay-verify="required" autocomplete="off">
+                </div>
+            </div>
+            <div class="layui-inline"><label for="" class="layui-form-label" style="padding-left:0;width:95px"><span class="g-c--red g-mr--5">*</span>确认登录密码</label>
+                <div class="layui-input-inline"><input name="verifypassword" type="password" class="layui-input" lay-verify="required" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>提现密码</label>
+                <div class="layui-input-inline"><input name="advancePassword" type="password" class="layui-input" lay-verify="required" autocomplete="off">
+                </div>
+            </div>
+            <div class="layui-inline"><label for="" class="layui-form-label" style="padding-left:0;width:95px"><span class="g-c--red g-mr--5">*</span>确认提现密码</label>
+                <div class="layui-input-inline"><input name="verifyAdvancePassword" type="password" class="layui-input" lay-verify="required" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit="" lay-filter="formRegister">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
 <script src="asset/plugins/layui/layui.js?rev=9b56ae39939493204376d43847c1b832"></script>
+<script type="text/html" id="memberDataBar">
+    <!--<a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>-->
+    <!--<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>-->
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
 <script>
     layui.config({
         base: './asset/' //这是存放拓展模块的根目录
     }).extend({ // 设定模块名
         mymod: 'js/mymod'
     });
-    layui.use(['jquery','layer', 'element','table', 'mymod'], function () {
+    layui.use(['jquery','layer', 'element','table','form','laydate','mymod'], function () {
         var $=layui.$
             ,layer = layui.layer
             , form = layui.form
             , element = layui.element
             , mymod = layui.mymod
-            , table = layui.table;
-//      layer.msg('Hello World');
-        /*业务公告*/
-        table.render({
-            elem:'#tableNotice'
+            , table = layui.table
+            ,laydate=layui.laydate;
+        //核实日期范围
+        laydate.render({
+            elem: '#verifyDate' //指定元素
+            ,range:true
+        });
+//        加入日期
+        laydate.render({
+            elem:'#createDate'
+            ,range:true
+        });
+        //会员资料表格
+        var tableMemberData=table.render({
+            elem:'#memberData'
             ,height:315
-//            ,url:''
+            ,url:'http://mock.eolinker.com/aFc9eZ770cd97b9ff2e841f6b94808a1e805817cf902406?uri=getMemberData'
             ,page:true
+            ,cellMinWidth: 100
             ,cols:[[
-                {field:'group',title:'分类',fixed:'left'},
-                {field:'title',title:'标题',fixed:'left'},
-                {field:'date',title:'日期',fixed:'left'}
-                ]]
-        })
-//        table.render({
-//            elem: '#tableNotice'
-//            ,height: 315
-////            ,url: '/demo/table/user/' //数据接口
-//            ,page: true //开启分页
-//            ,cols: [[ //表头
-//                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-//                ,{field: 'username', title: '用户名', width:80}
-//                ,{field: 'sex', title: '性别', width:80, sort: true}
-//                ,{field: 'city', title: '城市', width:80}
-//                ,{field: 'sign', title: '签名', width: 177}
-//                ,{field: 'experience', title: '积分', width: 80, sort: true}
-//                ,{field: 'score', title: '评分', width: 80, sort: true}
-//                ,{field: 'classify', title: '职业', width: 80}
-//                ,{field: 'wealth', title: '财富', width: 135, sort: true}
-//            ]]
-//        });
-
+                {type:'checkbox',fixed: 'left'}
+                ,{field:'memberNum',title:'会员编号'}
+                ,{field:'oldMemberNum',title:'原编号'}
+                ,{field:'memberName',title:'会员姓名'}
+                ,{field:'memberGrade',title:'级别'}
+                ,{field:'sellerNum',title:'销售商编号'}
+                ,{field:'credentials',title:'证件号',width:180}
+                ,{field:'addDate',title:'建立时间',width:180}
+                ,{title:'维护',fixed: 'right', width:80, align:'center', toolbar: '#memberDataBar'}
+            ]]
+        });
+//        复选框
+        table.on('checkbox(memberData)', function(obj){
+            console.log(obj.checked); //当前是否选中状态
+            console.log(obj.data); //选中行的相关数据
+            console.log(obj.type); //如果触发的是全选，则为：all，如果触发的是单选，则为：one
+        });
+//        删除单个会员
+        table.on('tool(memberData)',function (obj) {
+            var data=obj.data;
+            var layEvent=obj.event;
+            var tr=obj.tr;
+            console.log(obj);
+            if(layEvent==='del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.close(index);
+                    //向服务端发送删除指令
+                    /*tableMemberData.reload({
+                        page:{
+                            curr:1
+                        }
+                    })*/
+                });
+            }
+        });
+//        批量删除会员
+        $('#batchDel').on('click',function () {
+            var checkStatus = table.checkStatus('memberData');
+            var check_len=checkStatus.data.length;
+            console.log(checkStatus,check_len);
+            if(check_len===0){
+                layer.msg('请先勾选要删除的会员');
+                return
+            }
+            layer.confirm('确认删除所勾选的会员', function(index){
+                layer.close(index);
+                // todo 向服务端发送删除指令，重载表格
+                tableMemberData.reload({
+                    page:{
+                        curr:1
+                    }
+                })
+            });
+        });
+//        增加新会员
+        $('#addNewMember').on('click',function () {
+            var $reset=$('#memberRegister').find("button[type='reset']");
+            $reset.trigger('click');
+           layer.open({
+               type:1
+               ,title:'新增会员'
+               ,skin: 'layui-layer-rim'
+               ,area: '650px'
+               ,content:$('#memberRegister')
+           })
+        });
     })
     //    layui.link('asset/css/main.css');
 </script>

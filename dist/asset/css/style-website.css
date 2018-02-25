@@ -1291,7 +1291,7 @@
 
 .banner {
   height: 240px;
-  background-image: url(../images/contact.jpg?v=2018-02-23);
+  background-image: url(../images/contact.jpg?v=2018-02-25);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1299,7 +1299,7 @@
 }
 
 .banner.user {
-  background-image: url(../images/user.jpg?v=2018-02-23);
+  background-image: url(../images/user.jpg?v=2018-02-25);
 }
 
 .info-cn {

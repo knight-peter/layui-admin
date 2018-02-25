@@ -849,4 +849,59 @@
   margin: 0;
 }
 
+.iconfont.p-icon--account {
+  font-size: 100px;
+  line-height: 100px;
+  color: #888888;
+}
+
+/*奖金查询*/
+.p-bonus-box {
+  border: 1px solid #DDD;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  padding: 20px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+.p-bonus-box dd {
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.p-bonus_user {
+  font-size: 14px;
+}
+
+.p-bonus_user dd {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.p-bonus_total {
+  text-align: center;
+}
+
+.p-bonus_total dl {
+  font-size: 16px;
+  color: #666666;
+  font-weight: bold;
+}
+
+.p-bonus_total dd {
+  font-size: 28px;
+  color: #EC5F41;
+}
+
+.p_bonus_btn .layui-btn {
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=maps/main.css.map */

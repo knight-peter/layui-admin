@@ -64,7 +64,7 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">快捷菜单</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="./index_shopping.html">购买商品</a></dd>
+                        <dd><a href="./order_createOrder.html">购买商品<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
                         <dd><a href="./index_register.html">会员注册</a></dd>
                         <dd><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
                         <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
@@ -74,10 +74,10 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">订单中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="./order_createOrder.html">创建订单</a></dd>
-                        <dd><a href="./order_shoppingCart.html">我的购物车</a></dd>
-                        <dd><a href="./order_payOtherOrder.html">支付他人订单</a></dd>
-                        <dd><a href="./order_orderSearch.html">订单统计</a></dd>
+                        <dd><a href="./order_createOrder.html">创建订单<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./order_shoppingCart.html">我的购物车<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./order_payOtherOrder.html">支付他人订单<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./order_orderSearch.html">订单统计<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -105,17 +105,17 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">个人中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
-                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
-                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
-                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
+                        <dd><a href="./mine_personalInfo.html">个人资料<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="./help.html">帮助中心</a>
+                    <a href="./help.html">帮助中心<span class="layui-badge layui-bg-gray">开发中</span></a>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="./emails.html">邮件管理</a>
+                    <a href="./emails.html">邮件管理<span class="layui-badge layui-bg-gray">开发中</span></a>
                 </li>
             </ul>
         </div>
@@ -124,7 +124,7 @@
     <article class="layui-body">
         <div class="m-breadcrumb-wrap">
             <span class="layui-breadcrumb m-breadcrumb">
-                <a><cite>我的桌面</cite></a>
+                <a><cite>首页</cite></a>
             </span>
         </div>
         <!-- 页面内容 start -->
@@ -249,6 +249,11 @@
                 {field:'date',title:'日期',fixed:'left'}
                 ]]
         })
+        /*开发中的模块*/
+        $('.js-developing-link').on('click',function (event) {
+            layer.alert('该模块正在开发中');
+            event.preventDefault();
+        });
 //        table.render({
 //            elem: '#tableNotice'
 //            ,height: 315
