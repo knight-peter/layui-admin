@@ -131,73 +131,54 @@
         <!-- 页面内容 start -->
         <div class="m-page-content">
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>登陆信息</legend>
+                <legend>发展基金账户信息</legend>
             </fieldset>
-            <p class="layui-text"><span class="g-c--warn">徐子玉</span>，您好，欢迎您登录！今天是： <span class="g-c--warn">2018年02月06日 Tue</span>； 您的上次登录时间是：
-                <span class="g-c--warn">2018年02月05日 Mon</span></p>
-            <hr>
+            <div class="layui-card g-mt--10 p-card--bonus">
+                <div class="layui-card-body layui-row">
+                    <div class="layui-col-md4">
+                        <dl class="p-bonus_user">
+                            <dt>会员账户：</dt>
+                            <dd>XC06450228</dd>
+                        </dl>
+                    </div>
+                    <div class="layui-col-md4">
+                        <dl class="p-bonus_total">
+                            <dt>可用余额</dt>
+                            <dd>
+                                <small>￥</small>
+                                0.00
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="layui-col-md4 g-ta--r g-mt--10">
+                        <button type="button" class="layui-btn layui-btn-primary">转账</button>
+                    </div>
+                </div>
+            </div>
             <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务提醒</legend>
+                <legend>最近交易信息</legend>
             </fieldset>
-            <table class="layui-table">
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">财政月业绩提醒</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>您的目前奖衔</th>
-                    <td>无奖衔</td>
-                    <th>完成如下业绩可升至</th>
-                    <td>一星宝石</td>
-                </tr>
-                <tr>
-                    <th>您目前个人责任消费</th>
-                    <td>0.00</td>
-                    <th>还需完成责任消费</th>
-                    <td>400.00</td>
-                </tr>
-                <tr>
-                    <th>冠军月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成冠军部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                <tr>
-                    <th>活跃月新增业绩</th>
-                    <td>0.00pv</td>
-                    <th>还需完成活跃部门业绩（pv）</th>
-                    <td>20000.00pv</td>
-                </tr>
-                </tbody>
-                <thead>
-                <tr>
-                    <th class="g-ta--c layui-bg-blue" colspan="4">累计完成业绩</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>冠军部门累计业绩</th>
-                    <td>660K+000.00pv</td>
-                    <th>活跃部门累计业绩</th>
-                    <td>300K+000.00pv</td>
-                </tr>
-                <tr>
-                    <th>荣誉奖衔</th>
-                    <td>无奖衔</td>
-                    <th></th>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-            <p class="layui-text">以上数据考核周期为2018-02-01 00:00:00 - 2018-02-28 23:59:59；此数据为目前预算信息，尚未最后核算，仅供参考</p>
-            <hr>
-            <fieldset class="layui-field-title layui-elem-field">
-                <legend>业务公告</legend>
-            </fieldset>
-            <table id="tableNotice" lay-filter="test"></table>
-            <hr>
+            <form action="" class="layui-form">
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">变更日期</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="transactionData">
+                    </div>
+                    <label for="" class="layui-form-label">变更类型</label>
+                    <div class="layui-input-inline">
+                        <select id="traceTraceRecord">
+                            <option value="" selected>全部</option>
+                            <option value="0">支出</option>
+                            <option value="1">收入</option>
+                            <option value="2">冻结</option>
+                            <option value="3">解冻</option>
+                        </select>
+                    </div>
+                    <button type="button" class="layui-btn js-table-search">查询</button>
+                </div>
+            </form>
+
+            <table id="fund" lay-filter="fund"></table>
         </div>
         <!-- 页面内容 end -->
     </article>
@@ -224,50 +205,67 @@
 </div>
 
 <script src="asset/plugins/layui/layui.js?rev=9b56ae39939493204376d43847c1b832"></script>
+<script type="text/html" id="memberDataBar">
+    <a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
 <script>
     layui.config({
         base: './asset/' //这是存放拓展模块的根目录
     }).extend({ // 设定模块名
         mymod: 'js/mymod'
     });
-    layui.use(['jquery','layer', 'element','table', 'mymod'], function () {
-        var $=layui.$
-            ,layer = layui.layer
+    layui.use(['jquery', 'layer', 'element', 'table', 'form','laydate','mymod'], function () {
+        var $ = layui.$
+            , layer = layui.layer
             , form = layui.form
             , element = layui.element
             , mymod = layui.mymod
-            , table = layui.table;
-//      layer.msg('Hello World');
-        /*业务公告*/
-        table.render({
-            elem:'#tableNotice'
-            ,height:315
-//            ,url:''
-            ,page:true
-            ,cols:[[
-                {field:'group',title:'分类',fixed:'left'},
-                {field:'title',title:'标题',fixed:'left'},
-                {field:'date',title:'日期',fixed:'left'}
-                ]]
-        })
-//        table.render({
-//            elem: '#tableNotice'
-//            ,height: 315
-////            ,url: '/demo/table/user/' //数据接口
-//            ,page: true //开启分页
-//            ,cols: [[ //表头
-//                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-//                ,{field: 'username', title: '用户名', width:80}
-//                ,{field: 'sex', title: '性别', width:80, sort: true}
-//                ,{field: 'city', title: '城市', width:80}
-//                ,{field: 'sign', title: '签名', width: 177}
-//                ,{field: 'experience', title: '积分', width: 80, sort: true}
-//                ,{field: 'score', title: '评分', width: 80, sort: true}
-//                ,{field: 'classify', title: '职业', width: 80}
-//                ,{field: 'wealth', title: '财富', width: 135, sort: true}
-//            ]]
-//        });
-
+            , table = layui.table
+            , laydate = layui.laydate;
+//        交易时间
+        laydate.render({
+            elem: '#transactionData' //指定元素
+            , range: true //或 range: '~' 来自定义分割字符
+        });
+        var response = {
+//            statusName: 'status', //数据状态的字段名称，默认：code
+            statusCode: 200 //成功的状态码，默认：0
+//            ,msgName: 'hint' //状态信息的字段名称，默认：msg
+//            ,countName: 'total' //数据总数的字段名称，默认：count
+//            ,dataName: 'rows' //数据列表的字段名称，默认：data
+        };
+//        交易记录table
+        var tableFund = table.render({
+            elem: '#fund'
+            , height: 315
+            , url: 'http://mock.eolinker.com/aFc9eZ770cd97b9ff2e841f6b94808a1e805817cf902406?uri=getBonus'
+            , response: response
+            , page: true
+            , cellMinWidth: 100
+            , cols: [[
+                {field: 'memberNum', title: '会员编号'}
+                , {field: 'nickname', title: '昵称', width: 150}
+                , {field: 'stage', title: '期别'}
+                , {field: 'memberGrade', title: '级别'}
+                , {field: 'moneyTotal', title: '总奖金'}
+                , {field: 'moneyTotalLimit', title: '总奖金限额'}
+                , {title: '操作', fixed: 'right', width: 160, align: 'center', toolbar: '#memberDataBar'}
+            ]]
+        });
+        //查询
+        $('.js-table-search').on('click', function () {
+            tableFund.reload({
+                where: {
+                    aaaaaa: 'xxx'
+                    , bbb: 'yyy'
+                },
+                page: {
+                    curr: 1
+                }
+            })
+        });
     })
     //    layui.link('asset/css/main.css');
 </script>

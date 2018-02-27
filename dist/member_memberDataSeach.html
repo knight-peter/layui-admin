@@ -180,7 +180,7 @@
                 </div>
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit lay-filter="memberDataSeach">查询</button>
+                        <button class="layui-btn js-table-search" lay-submit lay-filter="memberDataSeach">查询</button>
                         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                     </div>
                 </div>
@@ -394,6 +394,18 @@
                ,area: '650px'
                ,content:$('#memberRegister')
            })
+        });
+        //查询
+        $('.js-table-search').on('click',function () {
+            tableMemberData.reload({
+                where:{
+                    aaaaaa: 'xxx'
+                    ,bbb: 'yyy'
+                },
+                page:{
+                    curr:1
+                }
+            })
         });
     })
     //    layui.link('asset/css/main.css');

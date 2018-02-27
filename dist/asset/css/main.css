@@ -904,4 +904,15 @@
   margin-top: 10px;
 }
 
+.p-card--bonus {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-card--bonus dd {
+  padding-top: 5px;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=maps/main.css.map */

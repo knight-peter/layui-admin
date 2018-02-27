@@ -134,7 +134,7 @@
             <fieldset class="layui-field-title layui-elem-field">
                 <legend>奖金账户信息</legend>
             </fieldset>
-            <div class="p-bonus-box g-clearfix">
+            <!--<div class="p-bonus-box g-clearfix">
                 <dl class="p-bonus_user">
                     <dt>会员账户：</dt>
                     <dd>XC06450228</dd>
@@ -145,8 +145,30 @@
                         <small>￥</small>0.00
                     </dd>
                 </dl>
-                <div class="p_bonus_btn">
+                <div class="p_bonus_btn g-ta&#45;&#45;r">
+                    <button type="button" class="layui-btn" >提现</button>
                     <button type="button" class="layui-btn">提现</button>
+                </div>
+            </div>-->
+            <div class="layui-card g-mt--10 p-card--bonus">
+                <div class="layui-card-body layui-row">
+                    <div class="layui-col-md4">
+                        <dl class="p-bonus_user">
+                            <dt>会员账户：</dt>
+                            <dd>XC06450228</dd>
+                        </dl>
+                    </div>
+                    <div class="layui-col-md4">
+                        <dl class="p-bonus_total">
+                            <dt>可用余额</dt>
+                            <dd>
+                                <small>￥</small>0.00
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="layui-col-md4 g-ta--r g-mt--10">
+                        <button type="button" class="layui-btn">提现</button>
+                    </div>
                 </div>
             </div>
             <fieldset class="layui-field-title layui-elem-field">
@@ -158,7 +180,7 @@
                     <div class="layui-input-inline">
                         <input type="text" class="layui-input">
                     </div>
-                    <button type="button" class="layui-btn">查询</button>
+                    <button type="button" class="layui-btn js-table-search">查询</button>
                     <div class="layui-form-mid layui-word-aux">(例：20170201)</div>
                 </div>
                 <table id="memberBonus" lay-filter="memberBonus"></table>
@@ -231,7 +253,18 @@
                 ,{title:'操作',fixed: 'right', width:160, align:'center', toolbar: '#memberDataBar'}
             ]]
         });
-
+        //查询
+        $('.js-table-search').on('click',function () {
+            tableMemberBonus.reload({
+                where:{
+                    aaaaaa: 'xxx'
+                    ,bbb: 'yyy'
+                },
+                page:{
+                    curr:1
+                }
+            })
+        })
     })
     //    layui.link('asset/css/main.css');
 </script>
