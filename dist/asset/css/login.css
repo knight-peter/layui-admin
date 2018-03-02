@@ -1,0 +1,597 @@
+@charset "UTF-8";
+.text-overflow-ht--e p {
+  position: relative;
+  line-height: 1.4em;
+  /* 3 times the line-height to show 3 lines */
+  height: 4.2em;
+  overflow: hidden;
+}
+
+.g-pt--5 {
+  padding-top: .25rem;
+}
+
+.g-p--10 {
+  padding: .5rem;
+}
+
+.g-pt--10 {
+  padding-top: .5rem;
+}
+
+.g-pt--20 {
+  padding-top: 1rem;
+}
+
+.g-pb--5 {
+  padding-bottom: .25rem;
+}
+
+.g-pb--10 {
+  padding-bottom: .5rem;
+}
+
+.g-pb--20 {
+  padding-bottom: 1rem;
+}
+
+.g-pl--5 {
+  padding-left: .25rem;
+}
+
+.g-pr--5 {
+  padding-right: .5rem;
+}
+
+.g-pl--10 {
+  padding-left: .5rem;
+}
+
+.g-pr--10 {
+  padding-right: .5rem;
+}
+
+.g-m--0 {
+  margin: 0;
+}
+
+.g-mb--5 {
+  margin-bottom: .25rem;
+}
+
+.g-mb--10 {
+  margin-bottom: .5rem;
+}
+
+.g-mb--15 {
+  margin-bottom: .75rem;
+}
+
+.g-mb--20 {
+  margin-bottom: 1rem;
+}
+
+.g-mr--5 {
+  margin-right: .25rem;
+}
+
+.g-mr--10 {
+  margin-right: 10px;
+}
+
+.g-mr--15 {
+  margin-right: 15px;
+}
+
+.g-mt--5 {
+  margin-top: .25rem;
+}
+
+.g-mt--10 {
+  margin-top: .5rem;
+}
+
+.g-mt--15 {
+  margin-top: .75rem;
+}
+
+.g-mt--20 {
+  margin-top: 1rem;
+}
+
+.g-mt--40 {
+  margin-top: 2rem;
+}
+
+.g-ml--5 {
+  margin-left: .25rem;
+}
+
+.g-ml--10 {
+  margin-left: .5rem;
+}
+
+.g-ml--20 {
+  margin-left: 1rem;
+}
+
+.g-f--l {
+  float: left;
+}
+
+.g-f--r {
+  float: right;
+}
+
+.g-t-a--r, .g-ta--r {
+  text-align: right;
+}
+
+.g-v-a--t {
+  vertical-align: top;
+}
+
+.g-v-a--m {
+  vertical-align: middle;
+}
+
+/*display------------------------------------------------------------------------------------------*/
+.g-dp--b {
+  display: block;
+}
+
+/*font-------------------------------------------------------------------------------------*/
+.g-fs--12 {
+  font-size: 12px;
+}
+
+.g-fs--14 {
+  font-size: 14px;
+}
+
+.g-fs--16 {
+  font-size: 16px;
+}
+
+.g-fs--18 {
+  font-size: 18px;
+}
+
+.g-fs--18.iconfont {
+  font-size: 18px;
+}
+
+.g-fs--20 {
+  font-size: 20px;
+}
+
+.g-fs--20.iconfont {
+  font-size: 20px;
+}
+
+.g-fw--600 {
+  font-weight: 600;
+}
+
+/*color--------------------------------------------------------------------------------*/
+.g-c-yellow,
+.g-c--yellow {
+  color: #FFBF00;
+}
+
+.g-c--danger,
+.g-c--red {
+  color: #E62B4A;
+}
+
+.g-c--danger > .m-td_title,
+.g-c--red > .m-td_title {
+  color: #E62B4A;
+}
+
+.g-c-blue--light {
+  color: #24ADDE;
+}
+
+.g-c--dark-yellow,
+.g-c--warn {
+  color: #F7C35B;
+}
+
+.g-c--dark-blue {
+  color: #73A2E1;
+}
+
+.g-c--light-red {
+  color: #F77766;
+}
+
+.g-c--success,
+.g-c--green {
+  color: #37BF3F;
+}
+
+.g-c--dark-green {
+  color: #025E21;
+}
+
+.g-c--orange {
+  color: #ff6600;
+}
+
+.g-c--orange-light {
+  color: #EFA46E;
+}
+
+.g-c--disabled,
+.g-c--gray {
+  color: #999;
+}
+
+.g-c--black {
+  color: #000;
+}
+
+/*color------------------------------------------------------------------------*/
+.g-bg-c--w {
+  background-color: #fff;
+}
+
+.g-ta--c, .g-t-a--c, .layui-table th.g-ta--c {
+  text-align: center;
+}
+
+.g-t-a-l, .g-ta--l {
+  text-align: left;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.on, .g-show {
+  display: block;
+}
+
+.g-hide, .g-hidden {
+  display: none;
+}
+
+.g-va--m {
+  vertical-align: middle;
+}
+
+/*辅助元素*/
+.m-hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.m-hr--white {
+  border-bottom: 1px solid #fff;
+}
+
+.g-text-comment,
+.g-text--comment {
+  font-size: 13px;
+  color: #888888;
+}
+
+/*图片*/
+.g-img-circle {
+  border-radius: 50%;
+}
+
+.g-img-bordered {
+  border: 2px solid #ddd;
+}
+
+.g-img-bordered.m-ranking_avatar {
+  border-width: 1px;
+}
+
+.g-hr {
+  border: none;
+  border-top: 1px solid #CECECE;
+  width: 100%;
+  display: block;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.g-hr.g-hr--dashed {
+  border-top-style: dashed;
+}
+
+.g-p_strong {
+  margin-left: 3px;
+  margin-right: 3px;
+  font-weight: 600;
+}
+
+.g-p-help {
+  color: #d6d6d6;
+  font-size: 80%;
+}
+
+.weui-cell .g-p-help {
+  color: #d6d6d6;
+}
+
+.g-p-help.g-c--gray {
+  color: #999;
+}
+
+.weui-cell .g-p-help.g-c--gray {
+  color: #999;
+}
+
+.g-overflow-wrap-y {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.g-wb--ba {
+  word-break: break-all;
+}
+
+.layui-card-body, .layui-card-header, .layui-form-label, .layui-form-mid, .layui-form-select, .layui-input-block, .layui-input-inline, .layui-textarea {
+  position: relative;
+}
+
+.layui-card {
+  margin-bottom: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #E6E6E6;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.layui-card:last-child {
+  margin-bottom: 0;
+}
+
+.layui-card-header {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px;
+  border-bottom: 1px solid #E6E6E6;
+  color: #333;
+  border-radius: 2px 2px 0 0;
+  font-size: 14px;
+}
+
+.layui-card-header .iconfont {
+  vertical-align: middle;
+}
+
+.layui-bg-black, .layui-bg-blue, .layui-bg-cyan, .layui-bg-green, .layui-bg-orange, .layui-bg-red {
+  color: #fff !important;
+}
+
+.layui-card-body {
+  padding: 10px 15px;
+  line-height: 24px;
+}
+
+.layui-card-body .layui-table {
+  margin: 5px 0;
+}
+
+.layui-card .layui-tab {
+  margin: 0;
+}
+
+.layui-panel-window {
+  position: relative;
+  padding: 15px;
+  border-radius: 0;
+  border-top: 5px solid #E6E6E6;
+  background-color: #fff;
+}
+
+.layui-table.m-table_th--color tbody th {
+  background-color: #F2F2F2;
+}
+
+.layadmin-link {
+  color: #029789 !important;
+}
+
+.icon-qq {
+  color: #3492ED;
+}
+
+.icon-weibo {
+  color: #4DAF29;
+}
+
+.icon-weixin-copy {
+  color: #CF1900;
+}
+
+[lay-href], [lay-tips], [layadmin-event] {
+  cursor: pointer;
+}
+
+/** layuiAdmin-v1.0.0-beta6 LPPL License By http://www.layui.com/admin/ */
+html {
+  background-color: #f2f2f2;
+  color: #666;
+}
+
+#app, body, html {
+  height: 100%;
+}
+
+.layui-layout-body {
+  overflow: auto;
+}
+
+.layadmin-user-login {
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 110px 0;
+  min-height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.layadmin-user-login-main {
+  width: 375px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.layadmin-user-login-box {
+  padding: 20px;
+}
+
+.layadmin-user-login-header {
+  text-align: center;
+}
+
+.layadmin-user-login-header h2 {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 30px;
+  color: #000;
+}
+
+.layadmin-user-login-header p {
+  font-weight: 300;
+  color: #999;
+}
+
+.layadmin-user-login-body .layui-form-item {
+  position: relative;
+}
+
+.layadmin-user-login-icon {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 38px;
+  line-height: 36px;
+  text-align: center;
+  color: #d2d2d2;
+}
+
+.layadmin-user-login-body .layui-form-item .layui-input {
+  padding-left: 38px;
+}
+
+.layadmin-user-login-codeimg {
+  max-height: 38px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.layadmin-user-login-other {
+  position: relative;
+  font-size: 0;
+  line-height: 38px;
+  padding-top: 20px;
+}
+
+.layadmin-user-login-other > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.layadmin-user-login-other .iconfont {
+  position: relative;
+  top: 2px;
+  font-size: 26px;
+}
+
+.layadmin-user-login-other a:hover {
+  opacity: .8;
+}
+
+.layadmin-user-jump-change {
+  float: right;
+}
+
+.layadmin-user-login-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  line-height: 30px;
+  padding: 20px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.layadmin-user-login-footer span {
+  padding: 0 5px;
+}
+
+.layadmin-user-login-footer a {
+  padding: 0 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.layadmin-user-login-footer a:hover {
+  color: black;
+}
+
+.layadmin-user-login-main[bgimg] {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.ladmin-user-login-theme {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.ladmin-user-login-theme ul {
+  display: inline-block;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.ladmin-user-login-theme ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 64px;
+  height: 43px;
+  cursor: pointer;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  background-color: #f2f2f2;
+}
+
+.ladmin-user-login-theme ul li:hover {
+  opacity: .9;
+}
+
+@media screen and (max-width: 768px) {
+  .layadmin-user-login {
+    padding-top: 60px;
+  }
+  .layadmin-user-login-main {
+    width: 300px;
+  }
+  .layadmin-user-login-box {
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=maps/login.css.map */

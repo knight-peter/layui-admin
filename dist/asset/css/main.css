@@ -833,6 +833,26 @@
   background-color: #F2F2F2;
 }
 
+.layadmin-link {
+  color: #029789 !important;
+}
+
+.icon-qq {
+  color: #3492ED;
+}
+
+.icon-weibo {
+  color: #4DAF29;
+}
+
+.icon-weixin-copy {
+  color: #CF1900;
+}
+
+[lay-href], [lay-tips], [layadmin-event] {
+  cursor: pointer;
+}
+
 .g-p--10 {
   padding: 10px;
 }

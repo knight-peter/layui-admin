@@ -1,10 +1,12 @@
 @import "./global";
-.layui-table th{
-  &.g-ta--c{
+
+.layui-table th {
+  &.g-ta--c {
     @extend .g-ta--c;
   }
 }
-.layui-card-body,.layui-card-header,.layui-form-label,.layui-form-mid,.layui-form-select,.layui-input-block,.layui-input-inline,.layui-textarea {
+
+.layui-card-body, .layui-card-header, .layui-form-label, .layui-form-mid, .layui-form-select, .layui-input-block, .layui-input-inline, .layui-textarea {
   position: relative
 }
 
@@ -12,8 +14,8 @@
   margin-bottom: 15px;
   border-radius: 2px;
   background-color: #fff;
-  border:1px solid #E6E6E6;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05)
+  border: 1px solid #E6E6E6;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05)
 }
 
 .layui-card:last-child {
@@ -28,13 +30,13 @@
   color: #333;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
-  .iconfont{
+  .iconfont {
     vertical-align: middle;
   }
 }
 
-.layui-bg-black,.layui-bg-blue,.layui-bg-cyan,.layui-bg-green,.layui-bg-orange,.layui-bg-red {
-  color: #fff!important
+.layui-bg-black, .layui-bg-blue, .layui-bg-cyan, .layui-bg-green, .layui-bg-orange, .layui-bg-red {
+  color: #fff !important
 }
 
 .layui-card-body {
@@ -57,8 +59,28 @@
   border-top: 5px solid #E6E6E6;
   background-color: #fff
 }
-.layui-table.m-table_th--color{
-  tbody th{
-    background-color:#F2F2F2;
+
+.layui-table.m-table_th--color {
+  tbody th {
+    background-color: #F2F2F2;
   }
+}
+
+.layadmin-link {
+  color: #029789 !important;
+}
+
+.icon-qq {
+  color: #3492ED;
+}
+
+.icon-weibo {
+  color: #4DAF29;
+}
+
+.icon-weixin-copy {
+  color: #CF1900;
+}
+[lay-href], [lay-tips], [layadmin-event] {
+  cursor: pointer;
 }
