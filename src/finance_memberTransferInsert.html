@@ -15,7 +15,7 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <header class="layui-header">
-        <div class="layui-logo">layui后台管理系统</div>
+        <a href="./index.html" class="layui-logo">layui后台管理系统</a>
         <!-- 头部区域 -->
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item">
@@ -66,7 +66,7 @@
                     <dl class="layui-nav-child">
                         <dd><a href="./order_createOrder.html">购买商品</a></dd>
                         <dd><a href="./index_register.html">会员注册</a></dd>
-                        <dd><a href="./index_memberBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
                         <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
                         <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
                     </dl>
@@ -89,14 +89,15 @@
                         <dd><a href="./finance_memberBonusSearch.html">奖金查询</a></dd>
                         <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
                         <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
-                        <dd><a href="./finance_memberPassbookSearch.html">购物币查询</a></dd>
+                        <dd><a href="./finance_memberPassbookSearch.html">新能源购物积分查询</a></dd>
                         <dd><a href="./finance_memberFundSearch.html">发展基金查询</a></dd>
-                        <dd><a href="./finance_memberPointSearch.html">产品积分查询</a></dd>
+                        <dd><a href="./finance_memberPointSearch.html">新能源购车积分查询</a></dd>
                         <dd><a href="./finance_memberWithdrawlsSearch.html">提现查询</a></dd>
                         <dd class="layui-this"><a href="./finance_memberTransferInsert.html">会员转账</a></dd>
                         <dd><a href="./finance_memberTransferSearch.html">转账查询</a></dd>
                         <dd><a href="./finance_memberChangeBonusSearch.html">奖金扣补查询</a></dd>
                         <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_memberBonusRecordSearch.html">奖金记录查询</a></dd>
                         <dd><a href="./finance_memberTransactionSearchAction.html">交易流水查询</a></dd>
                         <dd><a href="./finance_promotionAwardSearch.html">推广奖查询</a></dd>
                         <dd><a href="finance_awardGradeSearch.html">奖衔查询</a></dd>
@@ -134,7 +135,62 @@
             <fieldset class="layui-field-title layui-elem-field">
                 <legend>会员转账</legend>
             </fieldset>
+            <form action="" class="layui-form">
+                <div class="layui-form-item"><label for="" class="layui-form-label">购物类型</label>
+                    <div class="layui-input-inline">
+                        <select name="accountType" >
+                            <option value="" selected>请选择</option>
+                            <option value="0">新能源购物积分账户</option>
+                            <option value="2">发展基金账户</option>
+                            <option value="1">奖金账户</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item"><label for="" class="layui-form-label">当前余额</label>
+                    <div class="layui-form-mid layui-word-aux"><span class="g-fw--600 g-c--red g-mr--5">0.00</span>元</div>
+                </div>
 
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>转入账户</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label" style="padding-left:0px;width:95px;"><span class="g-c--red g-mr--5">*</span>收款会员编号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label" style="padding-left:0px;width:95px;"><span class="g-c--red g-mr--5">*</span>收款会员姓名</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>转账金额</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>支付密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">备注</label>
+                    <div class="layui-input-block"><textarea name="" id=""
+                                                              class="layui-textarea"></textarea></div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button type="button" class="layui-btn">确认转账</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <!-- 页面内容 end -->
     </article>
@@ -167,9 +223,9 @@
     }).extend({ // 设定模块名
         mymod: 'js/mymod'
     });
-    layui.use(['jquery','layer', 'element','table', 'mymod'], function () {
-        var $=layui.$
-            ,layer = layui.layer
+    layui.use(['jquery', 'layer', 'element', 'table', 'mymod'], function () {
+        var $ = layui.$
+            , layer = layui.layer
             , form = layui.form
             , element = layui.element
             , mymod = layui.mymod
@@ -177,15 +233,15 @@
 //      layer.msg('Hello World');
         /*业务公告*/
         table.render({
-            elem:'#tableNotice'
-            ,height:315
+            elem: '#tableNotice'
+            , height: 315
 //            ,url:''
-            ,page:true
-            ,cols:[[
-                {field:'group',title:'分类',fixed:'left'},
-                {field:'title',title:'标题',fixed:'left'},
-                {field:'date',title:'日期',fixed:'left'}
-                ]]
+            , page: true
+            , cols: [[
+                {field: 'group', title: '分类', fixed: 'left'},
+                {field: 'title', title: '标题', fixed: 'left'},
+                {field: 'date', title: '日期', fixed: 'left'}
+            ]]
         })
 //        table.render({
 //            elem: '#tableNotice'
@@ -204,7 +260,17 @@
 //                ,{field: 'wealth', title: '财富', width: 135, sort: true}
 //            ]]
 //        });
-
+        layer.alert('该模块正在开发中',{
+            icon:4,
+            closeBtn:0,
+            btn:['返回上一页','返回首页'],
+            btn1:function () {
+                window.history.back();
+            },
+            btn2:function () {
+                window.location.href='./index.html';
+            }
+        })
     })
     //    layui.link('asset/css/main.css');
 </script>

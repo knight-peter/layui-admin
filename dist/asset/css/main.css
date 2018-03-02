@@ -402,10 +402,6 @@
   color: #666;
 }
 
-.layui-layout-admin .m-footer {
-  padding: 5px 0;
-}
-
 .m-footer a {
   padding: 0 5px;
 }
@@ -831,6 +827,10 @@
   border-radius: 0;
   border-top: 5px solid #E6E6E6;
   background-color: #fff;
+}
+
+.layui-table.m-table_th--color tbody th {
+  background-color: #F2F2F2;
 }
 
 .g-p--10 {
