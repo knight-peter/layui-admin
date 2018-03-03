@@ -10,12 +10,12 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=@@hash">
     <link rel="stylesheet" href="asset/css/main.css?rev=@@hash">
-    <title>layui后台管理系统-在线充值</title>
+    <title>鑫诺新能源汽车-在线充值</title>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <header class="layui-header">
-        <a href="./index.html" class="layui-logo">layui后台管理系统</a>
+        <a href="./index.html" class="layui-logo">鑫诺新能源汽车</a>
         <!-- 头部区域 -->
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item">
@@ -135,7 +135,7 @@
             <fieldset class="layui-field-title layui-elem-field">
                 <legend>在线充值</legend>
             </fieldset>
-            <form action="" class="layui-form">
+            <form action="" class="layui-form" lay-filter="select">
                 <div class="layui-form-item">
                     <label for="" class="layui-form-label">充值会员</label>
                     <div class="layui-input-block">
@@ -151,17 +151,30 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>充值金额</label>
+                    <label for="" class="layui-form-label" style="padding-left:0;width:95px;"><span class="g-c--red g-mr--5">*</span>购买注册积分</label>
                     <div class="layui-input-inline">
                         <input type="number" class="layui-input" required lay-verify="required|momey">
                     </div>
+                    <div class="layui-form-mid layui-word-aux">注意积分是整数</div>
                 </div>
                 <div class="layui-form-item">
                     <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>支付方式</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="payType" id="quick" value="quick" title="快钱" checked>
-                        <input type="radio" name="payType" id="alipay" value="alipay" title="支付宝">
+                        <input type="radio" name="payType" id="balance" value="balance" lay-filter="payType" title="余额" checked>
+                        <input type="radio" name="payType" id="offline" value="offline" lay-filter="payType" title="线下支付">
                     </div>
+                </div>
+                <div class="layui-form-item js-official-account" style="display:none;">
+                    <label for="" class="layui-form-label"><span class="g-c--red">*</span>官方账号</label>
+                    <div class="layui-input-inline">
+                        <select name="" id="officialAccount" lay-filter="officialAccount">
+                            <option value="" selected>请选择</option>
+                            <option value="1">官方账号1</option>
+                            <option value="2">官方账号2</option>
+                            <option value="3">官方账号3</option>
+                        </select>
+                    </div>
+                    <!--<div class="layui-form-mid layui-word-aux"></div>-->
                 </div>
                 <div class="layui-form-item">
                     <div class="layui-input-block">
@@ -219,7 +232,22 @@
         form.on('submit(rechargeOnline)',function (data) {
             console.log(data.elem);
             return false;
-        })
+        });
+//        支付方式选择
+        form.on('radio(payType)', function(data){
+            console.log(data.elem); //得到radio原始DOM对象
+            console.log(data.value); //被点击的radio的value值
+            var $select=$('.js-official-account').find('select');
+            if(data.value==='offline'){
+                $('.js-official-account').show();
+            }else{
+
+                $('.js-official-account').hide();
+            }
+            $('#officialAccount').val('');
+            form.render('select','select');
+            console.log($select.val());
+        });
     })
     //    layui.link('asset/css/main.css');
 </script>
