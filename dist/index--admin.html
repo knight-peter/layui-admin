@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh:Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=e709c10966d4caa7924a8419714d5292">
+    <link rel="stylesheet" href="asset/css/main.css?rev=@@hash">
+    <title>鑫诺新能源汽车-后台管理系统</title>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <header class="layui-header">
+        <a href="./index.html" class="layui-logo">鑫诺新能源汽车</a>
+        <!-- 头部区域 -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">邮件管理</a></dd>
+                    <dd><a href="javascript:;">帮助中心</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <div class="layui-layout-right">
+            <div class="layui-form-item g-d--i-b">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" name="search" required lay-verify="required" placeholder="请输入查询内容" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-inline layui-input-width--auto">
+                        <button class="layui-btn">查询</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="layui-nav g-d--i-b">
+                <li class="layui-nav-item"><a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" alt="" class="layui-nav-img">
+                    徐子玉
+                </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">退出</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 侧边区域 -->
+    <aside class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!--左侧导航区域（可配合layui已有的垂直导航）-->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">快捷菜单</a>
+                    <dl class="layui-nav-child">
+                        <!--<dd><a href="./order_createOrder.html">购买商品<span class="layui-badge layui-bg-gray">开发中</span></a></dd>-->
+                        <dd><a href="./index_register.html">会员注册</a></dd>
+                        <dd><a href="./member_memberDataSeach--admin.html">会员资料维护</a></dd>
+                        <dd><a href="./finance_nowBonusSearch--admin.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_myAccountAction--admin.html">我的账户</a></dd>
+                        <dd><a href="./finance_memberRechargeOnline--admin.html">在线充值</a></dd>
+                        <dd><a href="./finance_withdrawals--admin.html">提现管理</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="./member_memberDataSeach.html">会员资料维护</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">财务中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./finance_memberBonusSearch.html">奖金查询</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">账户管理</a></dd>
+                        <dd><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
+                        <dd><a href="./finance_memberWithdrawlsSearch.html">提现查询</a></dd>
+                        <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
+
+                        <dd><a href="./finance_memberPassbookSearch.html">新能源购物积分查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_memberPointSearch.html">新能源购车积分查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+
+                        <dd><a href="./finance_memberFundSearch.html">发展基金查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_memberTransferInsert.html">会员转账<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_memberTransferSearch.html">转账查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_memberChangeBonusSearch.html">奖金扣补查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+
+                        <dd><a href="./finance_memberBonusRecordSearch.html">奖金记录查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_memberTransactionSearchAction.html">交易流水查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_promotionAwardSearch.html">推广奖查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./finance_awardGradeSearch.html">奖衔查询<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">订单中心<b>（开发中）</b></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./order_createOrder.html">创建订单<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./order_shoppingCart.html">我的购物车<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./order_payOtherOrder.html">支付他人订单<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./order_orderSearch.html">订单统计<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">个人中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址<span class="layui-badge layui-bg-gray">开发中</span></a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="./help.html">帮助中心</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="./emails.html">邮件管理<span class="layui-badge layui-bg-gray">开发中</span></a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- start layui-body -->
+    <article class="layui-body">
+        <div class="m-breadcrumb-wrap">
+            <span class="layui-breadcrumb m-breadcrumb">
+                <a><cite>首页</cite></a>
+            </span>
+        </div>
+        <!-- 页面内容 start -->
+        <div class="m-page-content">
+            <fieldset class="layui-field-title layui-elem-field">
+                <legend>登陆信息</legend>
+            </fieldset>
+            <p class="layui-text"><span class="g-c--warn">徐子玉</span>，您好，欢迎您登录！今天是： <span class="g-c--warn">2018年02月06日 Tue</span>； 您的上次登录时间是：
+                <span class="g-c--warn">2018年02月05日 Mon</span></p>
+            <hr>
+            <fieldset class="layui-field-title layui-elem-field">
+                <legend>业务提醒</legend>
+            </fieldset>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th class="g-ta--c layui-bg-blue" colspan="4">财政月业绩提醒</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>您的目前等级</th>
+                    <td>普通会员</td>
+                    <th>完成如下业绩可升至</th>
+                    <td>经理</td>
+                </tr>
+                <tr>
+                    <th>您目前个人责任消费</th>
+                    <td>0.00</td>
+                    <th>还需完成责任消费</th>
+                    <td>400.00</td>
+                </tr>
+                <tr>
+                    <th>冠军月新增业绩</th>
+                    <td>0.00pv</td>
+                    <th>还需完成冠军部门业绩（pv）</th>
+                    <td>20000.00pv</td>
+                </tr>
+                <tr>
+                    <th>活跃月新增业绩</th>
+                    <td>0.00pv</td>
+                    <th>还需完成活跃部门业绩（pv）</th>
+                    <td>20000.00pv</td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th class="g-ta--c layui-bg-blue" colspan="4">累计完成业绩</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>冠军部门累计业绩</th>
+                    <td>660K+000.00pv</td>
+                    <th>活跃部门累计业绩</th>
+                    <td>300K+000.00pv</td>
+                </tr>
+                <tr>
+                    <th>荣誉奖衔</th>
+                    <td>无奖衔</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="layui-text">以上数据考核周期为2018-02-01 00:00:00 - 2018-02-28 23:59:59；此数据为目前预算信息，尚未最后核算，仅供参考</p>
+            <hr>
+            <fieldset class="layui-field-title layui-elem-field">
+                <legend>业务公告</legend>
+            </fieldset>
+            <table id="tableNotice" lay-filter="test"></table>
+            <hr>
+        </div>
+        <!-- 页面内容 end -->
+    </article>
+    <!-- end layui-body -->
+    <footer class="layui-footer m-footer m-footer--inline">
+        <div class="layui-main">
+            <p>© 2017 <a href="javascript:;">layui.com</a> MIT license</p>
+            <p>
+                <a href="javascript:;">链接1</a>
+                <a href="javascript:;">链接2</a>
+                <a href="javascript:;">链接3</a>
+                <a href="javascript:;">链接4</a>
+                <a href="javascript:;">链接5</a>
+                <a href="javascript:;">链接6</a>
+            </p>
+            <p class="layui-breadcrumb" lay-separator="|">
+                <a href="#">娱乐</a>
+                <a href="#">八卦</a>
+                <a href="#">体育</a>
+                <a href="#">搞笑</a>
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script src="asset/plugins/layui/layui.js?rev=2efecd1c44cb8ee160f54f1847070cbd"></script>
+<script>
+    layui.config({
+        base: './asset/' //这是存放拓展模块的根目录
+    }).extend({ // 设定模块名
+        mymod: 'js/mymod'
+    });
+    layui.use(['jquery','layer', 'element','table', 'mymod'], function () {
+        var $=layui.$
+            ,layer = layui.layer
+            , form = layui.form
+            , element = layui.element
+            , mymod = layui.mymod
+            , table = layui.table;
+//      layer.msg('Hello World');
+        /*业务公告*/
+        table.render({
+            elem:'#tableNotice'
+            ,height:315
+//            ,url:''
+            ,page:true
+            ,cols:[[
+                {field:'group',title:'分类',fixed:'left'},
+                {field:'title',title:'标题',fixed:'left'},
+                {field:'date',title:'日期',fixed:'left'}
+                ]]
+        })
+        /*开发中的模块*/
+        $('.js-developing-link').on('click',function (event) {
+            layer.alert('该模块正在开发中');
+            event.preventDefault();
+        });
+//        table.render({
+//            elem: '#tableNotice'
+//            ,height: 315
+////            ,url: '/demo/table/user/' //数据接口
+//            ,page: true //开启分页
+//            ,cols: [[ //表头
+//                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
+//                ,{field: 'username', title: '用户名', width:80}
+//                ,{field: 'sex', title: '性别', width:80, sort: true}
+//                ,{field: 'city', title: '城市', width:80}
+//                ,{field: 'sign', title: '签名', width: 177}
+//                ,{field: 'experience', title: '积分', width: 80, sort: true}
+//                ,{field: 'score', title: '评分', width: 80, sort: true}
+//                ,{field: 'classify', title: '职业', width: 80}
+//                ,{field: 'wealth', title: '财富', width: 135, sort: true}
+//            ]]
+//        });
+
+    })
+    //    layui.link('asset/css/main.css');
+</script>
+</body>
+</html>

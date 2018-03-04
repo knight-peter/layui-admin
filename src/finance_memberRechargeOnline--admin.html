@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh:Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="asset/plugins/layui/css/layui.css?rev=@@hash">
+    <link rel="stylesheet" href="asset/css/main.css?rev=@@hash">
+    <title>鑫诺新能源汽车-在线充值</title>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <header class="layui-header">
+        <a href="./index.html" class="layui-logo">鑫诺新能源汽车</a>
+        <!-- 头部区域 -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">邮件管理</a></dd>
+                    <dd><a href="javascript:;">帮助中心</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <div class="layui-layout-right">
+            <div class="layui-form-item g-d--i-b">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" name="search" required lay-verify="required" placeholder="请输入查询内容"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-inline layui-input-width--auto">
+                        <button class="layui-btn">查询</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="layui-nav g-d--i-b">
+                <li class="layui-nav-item"><a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" alt="" class="layui-nav-img">
+                    徐子玉
+                </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd><a href="./mine_updatePassword.html">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">退出</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 侧边区域 -->
+    <aside class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!--左侧导航区域（可配合layui已有的垂直导航）-->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">快捷菜单</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./order_createOrder.html">购买商品</a></dd>
+                        <dd><a href="./index_register.html">会员注册</a></dd>
+                        <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
+                        <dd class="layui-this"><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">订单中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./order_createOrder.html">创建订单</a></dd>
+                        <dd><a href="./order_shoppingCart.html">我的购物车</a></dd>
+                        <dd><a href="./order_payOtherOrder.html">支付他人订单</a></dd>
+                        <dd><a href="./order_orderSearch.html">订单统计</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="./member_memberDataSeach.html">会员资料维护</a>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">财务中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./finance_memberBonusSearch.html">奖金查询</a></dd>
+                        <dd><a href="./finance_myAccountAction.html">我的账户</a></dd>
+                        <dd class="layui-this"><a href="./finance_memberRechargeOnline.html">在线充值</a></dd>
+                        <dd><a href="./finance_memberPassbookSearch.html">新能源购物积分查询</a></dd>
+                        <dd><a href="./finance_memberFundSearch.html">发展基金查询</a></dd>
+                        <dd><a href="./finance_memberPointSearch.html">新能源购车积分查询</a></dd>
+                        <dd><a href="./finance_memberWithdrawlsSearch.html">提现查询</a></dd>
+                        <dd><a href="./finance_memberTransferInsert.html">会员转账</a></dd>
+                        <dd><a href="./finance_memberTransferSearch.html">转账查询</a></dd>
+                        <dd><a href="./finance_memberChangeBonusSearch.html">奖金扣补查询</a></dd>
+                        <dd><a href="./finance_nowBonusSearch.html">实时业绩查询</a></dd>
+                        <dd><a href="./finance_memberBonusRecordSearch.html">奖金记录查询</a></dd>
+                        <dd><a href="./finance_memberTransactionSearchAction.html">交易流水查询</a></dd>
+                        <dd><a href="./finance_promotionAwardSearch.html">推广奖查询</a></dd>
+                        <dd><a href="finance_awardGradeSearch.html">奖衔查询</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">个人中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./mine_personalInfo.html">个人资料</a></dd>
+                        <dd><a href="./mine_bankCard.html">我的银行</a></dd>
+                        <dd><a href="./mine_personalAddress.html">收货地址</a></dd>
+                        <dd class="layui-this"><a href="./mine_updatePassword.html">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="./help.html">帮助中心</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="./emails.html">邮件管理</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- start layui-body -->
+    <article class="layui-body">
+        <div class="m-breadcrumb-wrap">
+            <span class="layui-breadcrumb m-breadcrumb">
+                <a href="./index.html">首页</a>
+                <a href="javascript:;">财务中心</a>
+                <a><cite>在线充值</cite></a>
+            </span>
+        </div>
+        <!-- 页面内容 start -->
+        <div class="m-page-content">
+            <fieldset class="layui-field-title layui-elem-field">
+                <legend>在线充值</legend>
+            </fieldset>
+            <form action="" class="layui-form" lay-filter="select">
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label"><span class="g-c--red g-mr--5">*</span>充值会员</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" lay-verify="required" placeholder="输入会员账号">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label" style="padding-left:0;width:95px;"><span class="g-c--red g-mr--5">*</span>充值注册积分</label>
+                    <div class="layui-input-inline">
+                        <input type="number" class="layui-input" required lay-verify="required|momey">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">注意积分是整数</div>
+                </div>
+
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button type="button" lay-submit lay-filter="rechargeOnline" class="layui-btn">确认充值</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 页面内容 end -->
+    </article>
+    <!-- end layui-body -->
+    <footer class="layui-footer m-footer m-footer--inline">
+        <div class="layui-main">
+            <p>© 2017 <a href="javascript:;">layui.com</a> MIT license</p>
+            <p>
+                <a href="javascript:;">链接1</a>
+                <a href="javascript:;">链接2</a>
+                <a href="javascript:;">链接3</a>
+                <a href="javascript:;">链接4</a>
+                <a href="javascript:;">链接5</a>
+                <a href="javascript:;">链接6</a>
+            </p>
+            <p class="layui-breadcrumb" lay-separator="|">
+                <a href="#">娱乐</a>
+                <a href="#">八卦</a>
+                <a href="#">体育</a>
+                <a href="#">搞笑</a>
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript" src="asset/plugins/layui/layui.js?rev=@@hash"></script>
+<script>
+    layui.config({
+        base: './asset/' //这是存放拓展模块的根目录
+    }).extend({ // 设定模块名
+        mymod: 'js/mymod'
+    });
+    layui.use(['jquery','layer', 'element','table','form','mymod'], function () {
+        var $=layui.$
+            ,layer = layui.layer
+            , form = layui.form
+            , element = layui.element
+            , mymod = layui.mymod
+            , table = layui.table;
+//      layer.msg('Hello World');
+        form.verify({
+            momey:[
+                /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/
+                ,'金额只能保留小数点后两位'
+            ]
+        });
+        form.on('submit(rechargeOnline)',function (data) {
+            console.log(data.elem);
+            return false;
+        });
+//        支付方式选择
+        form.on('radio(payType)', function(data){
+            console.log(data.elem); //得到radio原始DOM对象
+            console.log(data.value); //被点击的radio的value值
+            var $select=$('.js-official-account').find('select');
+            if(data.value==='offline'){
+                $('.js-official-account').show();
+            }else{
+
+                $('.js-official-account').hide();
+            }
+            $('#officialAccount').val('');
+            form.render('select','select');
+            console.log($select.val());
+        });
+    })
+    //    layui.link('asset/css/main.css');
+</script>
+</body>
+</html>
